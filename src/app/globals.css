@@ -67,3 +67,34 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes underline {
+  0% {
+    width: 0;
+    right: 50%;
+  }
+  100% {
+    width: 100%;
+    right: -10;
+  }
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  background-color: currentColor;
+  width: 0;
+  right: 50%;
+  transform: translateX(50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  animation: underline 0.3s ease forwards;
+}

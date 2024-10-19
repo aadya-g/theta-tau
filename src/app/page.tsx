@@ -6,6 +6,7 @@ import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
 import Link from 'next/link';
 import { PinContainer } from '@/components/ui/3d-pin';
 import EngineeringDisciplines from '@/components/sections/engineering-disciplines';
+import Navbar from '@/components/ui/nav-bar';
 
 export default function Home() {
   const products = [
@@ -70,25 +71,13 @@ export default function Home() {
         <meta name="description" content="Theta Tau Professional Engineering Fraternity" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header className="bg-blue-600 text-white">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="text-2xl font-bold">Θτ</div>
-          <ul className="flex space-x-4">
-            <li><Link href="#about" className="hover:text-blue-200">About Us</Link></li>
-            <li><a href="#join" className="hover:text-blue-200">Join</a></li>
-            <li><a href="#events" className="hover:text-blue-200">Events</a></li>
-            <li><a href="#contact" className="hover:text-blue-200">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       <main>
         <HeroParallax products={products} />;
 
         <section className="bg-gray-100 py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-12 text-center text-indigo-800">About Theta Tau</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="col-span-1 md:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <img src="/images/theta-tau-group.jpg" alt="Theta Tau members" className="w-full h-64 object-cover" />
@@ -101,14 +90,14 @@ export default function Home() {
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
                   <img src="/images/professional-development.jpg" alt="Professional development" className="w-full h-48 object-cover" />
                   <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Professional Excellence</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Professional Development</h3>
                     <p className="text-gray-700 text-sm">We foster high standards of professional interest and ethics among our members.</p>
                   </div>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
                   <img src="/images/fraternal-bond.jpg" alt="Fraternal bond" className="w-full h-48 object-cover" />
                   <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Strong Brotherhood</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Brotherhood</h3>
                     <p className="text-gray-700 text-sm">Our fraternity unites members in a strong bond of fraternal fellowship.</p>
                   </div>
                 </div>
@@ -117,7 +106,7 @@ export default function Home() {
                 <div className="md:flex">
                   <img src="/images/engineering-projects.jpg" alt="Engineering projects" className="w-full md:w-1/3 h-64 object-cover" />
                   <div className="p-6 md:w-2/3">
-                    <h3 className="text-2xl font-semibold mb-4 text-red-600 hover:text-red-800 transition-colors duration-300">Hands-on Experience</h3>
+                    <h3 className="text-2xl font-semibold mb-4 text-red-600 hover:text-red-800 transition-colors duration-300">Community Service</h3>
                     <p className="text-gray-700">Theta Tau provides numerous opportunities for members to engage in real-world engineering projects, enhancing their skills and preparing them for successful careers in the field.</p>
                   </div>
                 </div>
