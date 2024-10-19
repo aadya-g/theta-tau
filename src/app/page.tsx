@@ -2,11 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { HeroParallax } from '@/components/ui/hero-parallax';
-import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
-import Link from 'next/link';
-import { PinContainer } from '@/components/ui/3d-pin';
-import EngineeringDisciplines from '@/components/sections/engineering-disciplines';
 import Navbar from '@/components/ui/nav-bar';
+import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
+import { AlumniPlacementGrid } from '@/components/sections/alumni-placement-grid';
+import { Location } from '@/components/sections/location';
 
 export default function Home() {
   const products = [
@@ -17,6 +16,50 @@ export default function Home() {
     { title: "Product 5", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 5" /> },
     { title: "Product 6", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 6" /> },
   ];
+
+  const content = [
+    {
+      title: "Fraternal Bonding",
+      description:
+        "Unite with your brothers and sisters in a shared mission. Our platform fosters a sense of community and belonging, allowing you to connect with like-minded individuals on a deeper level. With our platform, you can build lasting relationships that transcend beyond the boundaries of your chapter.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Fraternal Bonding
+        </div>
+      ),
+    },
+    {
+      title: "Philanthropy and Service",
+      description:
+        "Make a difference in the lives of others. Our platform empowers you to organize and participate in meaningful philanthropic events and community service projects. By working together, you can create a lasting impact on the world around you.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          Philanthropy and Service
+        </div>
+      ),
+    },
+    {
+      title: "Academic Support",
+      description:
+        "Support your brothers and sisters in their academic pursuits. Our platform provides a network of peers who can offer guidance, resources, and encouragement. By working together, you can achieve academic success and build a stronger, more supportive community.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Academic Support
+        </div>
+      ),
+    },
+    {
+      title: "Leadership Development",
+      description:
+        "Develop your leadership skills and take on new challenges. Our platform provides opportunities for you to step up and take on leadership roles, helping you grow as a person and develop valuable skills.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          Leadership Development
+        </div>
+      ),
+    },
+  ];
+
 
   const people: any[] = [];
   //   {
@@ -66,54 +109,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Head>
-        <title>Theta Tau Engineering Fraternity</title>
-        <meta name="description" content="Theta Tau Professional Engineering Fraternity" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
 
       <main>
+        {/* Hero Section */}
         <HeroParallax products={products} />;
 
-        <section className="bg-gray-100 py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="col-span-1 md:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                <img src="/images/theta-tau-group.jpg" alt="Theta Tau members" className="w-full h-64 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-4 text-red-600 hover:text-red-800 transition-colors duration-300">Oldest Engineering Fraternity</h3>
-                  <p className="text-gray-700">Founded in 1904 at the University of Minnesota, Theta Tau has initiated over 40,000 members and maintains a strong presence at ABET accredited schools.</p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-8">
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                  <img src="/images/professional-development.jpg" alt="Professional development" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Professional Development</h3>
-                    <p className="text-gray-700 text-sm">We foster high standards of professional interest and ethics among our members.</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                  <img src="/images/fraternal-bond.jpg" alt="Fraternal bond" className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2 text-red-600 hover:text-red-800 transition-colors duration-300">Brotherhood</h3>
-                    <p className="text-gray-700 text-sm">Our fraternity unites members in a strong bond of fraternal fellowship.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-1 md:col-span-3 bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
-                <div className="md:flex">
-                  <img src="/images/engineering-projects.jpg" alt="Engineering projects" className="w-full md:w-1/3 h-64 object-cover" />
-                  <div className="p-6 md:w-2/3">
-                    <h3 className="text-2xl font-semibold mb-4 text-red-600 hover:text-red-800 transition-colors duration-300">Community Service</h3>
-                    <p className="text-gray-700">Theta Tau provides numerous opportunities for members to engage in real-world engineering projects, enhancing their skills and preparing them for successful careers in the field.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* About Section */}
+        <StickyScroll content={content} />
 
         {/* Blog Section */}
         <section className="bg-gray-100 py-16">
@@ -135,39 +137,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-[40rem] w-full flex items-center justify-center flex-col">
-          <h2 className="text-3xl font-bold mb-8 text-center">Who are we?</h2>
-          <AnimatedTooltip items={[]} />
-          <h1 className="text-5xl font-bold mb-8 text-center">IMAGINE ITS HERE</h1>
-        </section>
+        {/* Alumni Placement Section */}
+        <AlumniPlacementGrid />
 
 
-
-        <section className="h-[40rem] w-full flex items-center justify-center flex-col">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-8 text-center">Where are we located?</h2>
-          </div>
-          <PinContainer
-            title="/google.com/maps"
-            href="https://www.google.com/maps/place/1633+Monroe+St,+Madison,+WI+53711/@43.0651909,-89.4262828,14.5z/data=!4m6!3m5!1s0x8807acdcd3deaa2f:0xc01e3895e71db0ba!8m2!3d43.0662918!4d-89.414693!16s%2Fg%2F11c282dzwc?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
-          >
-            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-              <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                Theta Tau House Location
-              </h3>
-              <div className="text-base !m-0 !p-0 font-normal">
-                <span className="text-slate-500 ">
-                  1621 Engineering Drive, Madison, WI
-                </span>
-              </div>
-              <img
-                src={`https://maps.googleapis.com/maps/api/staticmap?center=43.066519075696945,-89.41472518969684&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C43.066519075696945,-89.41472518969684&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-                alt="Theta Tau House Location"
-                className="flex flex-1 w-full rounded-lg mt-4 object-cover"
-              />
-            </div>
-          </PinContainer>
-        </section>
+        {/* Join Section */}
 
         <section id="join" className="bg-gray-200 py-20">
           <div className="container mx-auto px-6">
@@ -215,5 +189,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 

@@ -3,10 +3,9 @@ import { ArrowRight } from 'lucide-react'
 import Navbar from '@/components/ui/nav-bar'
 import Link from 'next/link'
 
-export default function Component() {
+export default function Blog() {
     return (
         <div className="min-h-screen bg-white text-gray-900">
-            <Navbar />
             <section className="container mx-auto px-4 pt-32 pb-16">
                 <h1 className="text-6xl font-bold text-center mb-8">Blog</h1>
                 <p className="text-xl text-center mb-32">Read about our latest product and research announcements.</p>
@@ -34,7 +33,7 @@ export default function Component() {
                         </div>
                         <div className="md:w-1/2 p-6 flex flex-col justify-end">
                             <p className="text-gray-600 mb-2">August 13, 2024</p>
-                            <Link href="#" className="text-3xl font-bold mb-4 transition duration-200 ease-in-out hover:text-red-800 hover:underline decoration-red-800">
+                            <Link href="#" className="text-3xl font-bold mb-4 transition  hover:text-red-800 hover:underline decoration-red-800">
                                 Grok-2 Beta Release
                             </Link>
                             <p className="mb-4">
