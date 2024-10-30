@@ -8,7 +8,7 @@ export function AlumniPlacementGrid() {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">Our Alumni Network</h2>
         <p className="text-lg text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Epsilon Pi Tau alumni are making significant contributions at leading technology and engineering companies worldwide. Explore our extensive network:
+          Theta Tau alumni are making significant contributions at leading technology and engineering companies worldwide. Explore our extensive network:
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-border">
           {companyLogos.map((logo, index) => (
@@ -18,7 +18,7 @@ export function AlumniPlacementGrid() {
                 alt={logo.alt}
                 width={100}
                 height={100}
-                objectFit="contain"
+                style={{ objectFit: "contain" }}
               />
             </div>
           ))}

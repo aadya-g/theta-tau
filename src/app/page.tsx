@@ -1,20 +1,36 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import { HeroParallax } from '@/components/ui/hero-parallax';
-import Navbar from '@/components/ui/nav-bar';
+
+import { HeroParallax } from "@/components/ui/hero-parallax";
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import { AlumniPlacementGrid } from '@/components/sections/alumni-placement-grid';
-import { Location } from '@/components/sections/location';
 
 export default function Home() {
   const products = [
-    { title: "Image", link: "#", thumbnail: <Image src="/../../public/20240128_175030_71EB21-1024x768.png" width={150} height={150} alt="Image" /> },
-    { title: "Product 2", link: "#", thumbnail: <Image src="public/20240217_185901_798044-e1714667798388-edited.jpeg" width={150} height={150} alt="Product 2" /> },
-    { title: "Product 3", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 3" /> },
-    { title: "Product 4", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 4" /> },
-    { title: "Product 5", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 5" /> },
-    { title: "Product 6", link: "#", thumbnail: <Image src="https://via.placeholder.com/150" width={150} height={150} alt="Product 6" /> },
+    {
+      title: "Theta Tau House",
+      link: "#",
+      thumbnail: "/TT_house_img.jpg"
+    },
+    {
+      title: "Brotherhood",
+      link: "#",
+      thumbnail: "/IMG_3469-2-1024x703.jpg"
+    },
+    {
+      title: "Community",
+      link: "#",
+      thumbnail: "/IMG_3471-1024x738.jpg"
+    },
+    {
+      title: "Leadership",
+      link: "#",
+      thumbnail: "/IMG_4186-768x1024.jpg"
+    },
+    {
+      title: "Engineering Excellence",
+      link: "#",
+      thumbnail: "/20240128_175030_71EB21-1024x768.png"
+    }
   ];
 
   const content = [
@@ -62,50 +78,6 @@ export default function Home() {
 
 
   const people: any[] = [];
-  //   {
-  //     id: 1,
-  //     name: "John Doe",
-  //     designation: "Software Engineer",
-  //     image:
-  //       "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Robert Johnson",
-  //     designation: "Product Manager",
-  //     image:
-  //       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Jane Smith",
-  //     designation: "Data Scientist",
-  //     image:
-  //       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Emily Davis",
-  //     designation: "UX Designer",
-  //     image:
-  //       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "Tyler Durden",
-  //     designation: "Soap Developer",
-  //     image:
-  //       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-  //   },
-  //   {
-  //     id: 6,
-  //     name: "Dora",
-  //     designation: "The Explorer",
-  //     image:
-  //       "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
-  //   },
-  // ];
-
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -189,6 +161,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
