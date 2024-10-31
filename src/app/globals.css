@@ -67,6 +67,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logo-track {
+  animation: scrollRight 30s linear infinite;
+}
+
+.logo-track.paused {
+  animation-play-state: paused;
+}
+
 @keyframes underline {
   0% {
     width: 0;
