@@ -1,4 +1,3 @@
-
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +7,7 @@ import { getAllPostSlugs, getPostData } from '@/lib/blog';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from 'rehype-prism-plus';
 import remarkGfm from 'remark-gfm';
+import { Footer } from '@/components/ui/footer';
 
 export async function generateStaticParams() {
     const paths = getAllPostSlugs();
@@ -31,14 +31,14 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             </div>
                         </div>
                     </Link>
-                    <div className="flex flex-col md:flex-row min-h-[500px]">
-                        <div className="md:w-1/2">
+                    <div className="flex flex-col md:flex-row min-h-[400px]">
+                        <div className="md:w-1/2 h-[400px]">
                             <Image
                                 src={post.image}
                                 alt={post.title}
-                                width={600}
-                                height={600}
-                                className="w-full h-full object-cover"
+                                width={400}
+                                height={400}
+                                className="w-full h-[400px] object-cover"
                             />
                         </div>
                         <div className="md:w-1/2 p-6 pt-32 flex flex-col justify-end">
@@ -65,6 +65,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </article>
     );
 }

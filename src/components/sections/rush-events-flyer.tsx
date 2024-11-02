@@ -1,21 +1,14 @@
-'use client'
-
-import Image from "next/image"
+"use client";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 export function RushEventsFlyer() {
+    const imageUrl = "/Fall-24-Rush-Flyer-Color-v4-667x1024.png";
+
     return (
-        <section className="relative h-screen w-full">
-            <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                    src="/rush-events-flyer.jpg" // This should be replaced with the actual flyer image
-                    alt="Rush Events Schedule"
-                    fill
-                    className="object-contain"
-                    priority
-                />
+        <section className="w-full h-[80vh] flex items-center justify-center">
+            <div className="text-5xl font-bold text-center">
+                Rush Events section placeholder
             </div>
-            {/* Optional overlay for better text visibility if needed */}
-            <div className="absolute inset-0 bg-black/5" />
         </section>
-    )
+    );
 }

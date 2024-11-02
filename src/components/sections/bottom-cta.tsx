@@ -24,7 +24,7 @@ export function BottomCTA() {
                         <Button type="submit">Join Now</Button>
                     </form>
                     <p className="text-xs text-muted-foreground">
-                        We respect your privacy and will never share your information.
+                        Sign up to get notified about our rush events and deadlines.
                     </p>
                 </div>
             </div>

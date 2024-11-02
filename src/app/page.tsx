@@ -131,24 +131,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <main>
-        {/* Hero Section */}
-        <HeroParallax products={products} />
+      {/* Hero Section */}
+      <HeroParallax products={products} />
 
-        {/* About Section */}
-        <StickyScroll content={content} />
+      {/* About Section */}
+      <StickyScroll content={content} />
 
-        {/* Blog Section */}
-        <HomeBlogSection />
+      {/* Blog Section */}
+      <HomeBlogSection />
 
-        {/* Alumni Placement Section */}
-        <AlumniPlacementGrid />
+      {/* Alumni Placement Section */}
+      <AlumniPlacementGrid />
 
-        {/* Bottom CTA */}
-        <BottomCTA />
-      </main>
-
-      <Footer />
+      {/* Bottom CTA */}
+      <BottomCTA />
     </div>
   );
 }

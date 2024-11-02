@@ -14,14 +14,14 @@ export function RecruitmentFAQ() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">Frequently Asked Questions</h2>
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
-                        <AccordionTrigger>What is Epsilon Pi Tau?</AccordionTrigger>
+                        <AccordionTrigger>What is Theta Tau?</AccordionTrigger>
                         <AccordionContent>
-                            Epsilon Pi Tau is an engineering honor society that promotes excellence in academics, leadership, and
+                            Theta Tau is an engineering honor society that promotes excellence in academics, leadership, and
                             professional development for engineering students.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                        <AccordionTrigger>Who can join Epsilon Pi Tau?</AccordionTrigger>
+                        <AccordionTrigger>Who can join Theta Tau?</AccordionTrigger>
                         <AccordionContent>
                             Membership is open to engineering students who maintain a high GPA and demonstrate leadership potential.
                             Specific requirements may vary, so we encourage you to attend our info session for more details.
