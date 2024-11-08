@@ -58,7 +58,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                             options={{
                                 mdxOptions: {
                                     remarkPlugins: [remarkGfm],
-                                    rehypePlugins: [rehypeSlug, rehypePrism],
+                                    rehypePlugins: [rehypeSlug],
                                 },
                             }}
                         />
