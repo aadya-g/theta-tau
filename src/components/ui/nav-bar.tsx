@@ -39,12 +39,21 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
 
 function LogoIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="500.000000pt" height="500.000000pt" viewBox="0 0 500.000000 500.000000"
-            preserveAspectRatio="xMidYMid meet" {...props}>
-
-            <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-                fill="#800000" stroke="none">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 500 500"
+            preserveAspectRatio="xMidYMid meet"
+            shapeRendering="geometricPrecision"
+            {...props}
+        >
+            <g
+                transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
+                fill="#800000"
+                stroke="none"
+                vectorEffect="non-scaling-stroke"
+            >
                 <path d="M1119 3764 c-247 -44 -471 -158 -642 -327 -179 -176 -289 -388 -343
 -662 -25 -126 -25 -414 0 -540 124 -623 588 -1015 1202 -1015 147 0 247 13
 363 46 202 59 360 152 507 299 175 174 284 381 341 648 26 118 25 468 0 585
