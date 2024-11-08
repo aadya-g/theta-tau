@@ -1,8 +1,7 @@
-import { RecruitmentHero } from "@/components/sections/recruitment-hero"
-import { RushEventsFlyer } from "@/components/sections/rush-events-flyer"
-import { RecruitmentFAQ } from "@/components/sections/recruitment-faq"
-import { Footer } from "@/components/ui/footer"
-import { RecruitmentLinks } from "@/components/sections/recruitment-links"
+import { RecruitmentEventsFlyer } from "@/components/recruitment/recruitment-events-flyer"
+import { RecruitmentFAQ } from "@/components/recruitment/recruitment-faq"
+import { RecruitmentHero } from "@/components/recruitment/recruitment-hero"
+import { RecruitmentLinks } from "@/components/recruitment/recruitment-links"
 
 export default function Recruitment() {
     return (
@@ -11,7 +10,7 @@ export default function Recruitment() {
             <RecruitmentHero />
 
             {/* Full viewport flyer section */}
-            <RushEventsFlyer />
+            <RecruitmentEventsFlyer />
 
             {/* Instagram Section */}
             <RecruitmentLinks />

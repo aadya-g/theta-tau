@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Navbar() {
     return (
         <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/30 dark:bg-gray-900/30">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="container max-w-7xl mx-auto">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center space-x-8">
                         <Link href="/" className="flex-shrink-0">
@@ -13,9 +13,6 @@ export default function Navbar() {
                             <div className="flex items-baseline space-x-4">
                                 <NavLink href="/recruitment">
                                     <span className="text-lg">Recruitment</span>
-                                </NavLink>
-                                <NavLink href="/about">
-                                    <span className="text-lg">About</span>
                                 </NavLink>
                                 <NavLink href="/blog">
                                     <span className="text-lg">Blog</span>

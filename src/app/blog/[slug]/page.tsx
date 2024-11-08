@@ -66,7 +66,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 </div>
             </div>
 
-            <Footer />
         </article>
     );
 }
