@@ -2,6 +2,7 @@
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { DirectionAwareHover } from "../ui/direction-aware-hover";
+import { EmailCollector } from "@/lib/email-collector";
 
 export function RecruitmentHero() {
     const imageUrl = "/20240217_185909_729EA7.jpeg";
@@ -19,22 +20,13 @@ export function RecruitmentHero() {
                         </p>
                     </div>
                     <div className="w-full max-w-sm space-y-2">
-                        <form className="flex flex-col gap-2">
-                            <div className="flex flex-row gap-2">
-                                <Input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="border-gray-300"
-                                    aria-label="Email for notifications"
-                                />
-                                <Button type="submit" className="bg-black text-white hover:bg-black/90">
-                                    Get Notified
-                                </Button>
-                            </div>
-                            <p className="text-xs text-gray-500">
-                                Sign up to get notified about our rush events and deadlines.
-                            </p>
-                        </form>
+                        <EmailCollector 
+                            source="recruitment_hero"
+                            className="[&_button]:bg-black [&_button]:text-white [&_button]:hover:bg-black/90 [&_input]:border-gray-300"
+                        />
+                        <p className="text-xs text-gray-500">
+                            Sign up to get notified about our rush events and deadlines.
+                        </p>
                     </div>
                 </div>
                 <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end">

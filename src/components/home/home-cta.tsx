@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import dynamic from "next/dynamic"
 import { globeConfig, sampleArcs } from "@/data/globe-data"
+import { EmailCollector } from "@/lib/email-collector"
 
 const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
     ssr: false,
@@ -27,15 +28,7 @@ export function HomeCTA() {
                             Stay informed about upcoming recruitment events and professional development opportunities.
                         </p>
                         <div className="w-full max-w-sm space-y-2 mt-6">
-                            <form className="flex flex-col sm:flex-row gap-2">
-                                <Input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="max-w-lg flex-1"
-                                    aria-label="Email for notifications"
-                                />
-                                <Button type="submit">Subscribe</Button>
-                            </form>
+                            <EmailCollector source="home_cta" />
                             <p className="text-xs text-gray-300">
                                 Receive updates about recruitment events and important deadlines.
                             </p>
