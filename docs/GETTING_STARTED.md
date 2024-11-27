@@ -21,27 +21,33 @@ This guide will walk you through the process of setting up your own copy of the 
 
 ## Setting Up Vercel
 
-1. **Create a Vercel Account**
-   - Go to [Vercel](https://vercel.com)
-   - Sign up using your GitHub account
-   - Choose the free tier for personal projects
+1. **Access the Theta Tau Vercel Account**
+   - You should have received the "Website Credentials and Access Information" Google Doc from your chapter's leadership
+   - This document contains all necessary credentials and access details
+   - Use the Vercel account credentials provided in the document to log in at [Vercel](https://vercel.com)
+   - If you haven't received access to this document, contact your chapter's leadership
 
-2. **Import Your Repository**
-   - Click "Add New Project" in Vercel dashboard
-   - Select your forked theta-tau repository
+2. **Fork and Connect Repository**
+   - Fork this repository to your chapter's GitHub organization
+   - Go to your Vercel dashboard
+   - Click the project "theta-tau"
+   - Go to "Settings"
+   - Under "Git" section, click "Connected Git Repository"
+   - Click "Disconnect" from the current repository
+   - Click "Connect Git Repository"
+   - Select your forked repository
    - Vercel will automatically detect it as a Next.js project
 
-3. **Configure Project Settings**
-   - Project Name: Choose a name (e.g., "theta-tau-website")
-   - Framework Preset: Should automatically be set to Next.js
-   - Root Directory: Leave as `.` (root)
-   - Build Command: Leave as default
-   - Output Directory: Leave as default
+3. **Override Previous Website**
+   - In the Vercel project settings, go to "Domains"
+   - You will see the existing domain configuration
+   - Your deployment will automatically override the previous website
+   - No additional configuration is needed as the domain is already set up
 
 4. **Deploy**
    - Click "Deploy"
    - Wait for the initial deployment to complete
-   - Vercel will provide you with a deployment URL
+   - Your website will now be live at the chapter's domain
 
 ## Connecting Custom Domain (Optional)
 
@@ -60,12 +66,9 @@ This guide will walk you through the process of setting up your own copy of the 
 
 Vercel will automatically deploy changes when you:
 1. Push to the main branch of your repository
-2. Create or merge a pull request
 
 To make changes:
 ```bash
-# Create a new branch for your changes
-git checkout -b feature/my-changes
 
 # Make your changes...
 
@@ -74,14 +77,14 @@ git add .
 git commit -m "Description of changes"
 
 # Push to GitHub
-git push origin feature/my-changes
+git push
 ```
 
 ## Managing Environment Variables
 
 1. **Local Environment**
-   - Copy `.env.example` to `.env.local`
-   - Fill in required environment variables
+   - Copy the environment variables from the "Website Credentials and Access Information" Google Doc
+   - Paste these values into your `.env.local` file
 
 2. **Vercel Environment**
    - Go to your project settings in Vercel
@@ -128,4 +131,5 @@ If you encounter any issues:
 1. Check the [Vercel Documentation](https://vercel.com/docs)
 2. Review the [Next.js Deployment Guide](https://nextjs.org/docs/deployment)
 3. Contact the previous website chair
-4. Reach out to the chapter technology committee
+
+Happy coding!
