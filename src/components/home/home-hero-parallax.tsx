@@ -37,7 +37,7 @@ const AnimatedCard = ({
           ease: "easeInOut"
         }
       }}
-      className="relative h-[40rem] w-[40rem]"
+      className="relative h-[20rem] md:h-[40rem] w-full md:w-[40rem]"
     >
       <Link href={product.link} className="block h-full">
         <Image
@@ -112,13 +112,27 @@ export const HomeHeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[290vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[290vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="relative bg-white min-h-screen flex items-center">
-        <div className="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 relative z-30 pb-20">
-          <Header />
-          <div className="hidden md:flex items-center justify-end">
-            <AnimatedCard product={products[currentProductIndex]} isActive={isCardActive} />
+        <div className="container max-w-7xl mx-auto px-4 relative z-30 pb-20">
+          <div className="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+            <div className="flex flex-col">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg md:flex-shrink-0 z-20 pt-16 md:pt-0">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-8xl text-black">
+                  Theta Tau
+                </h2>
+                <p className="mt-4 text-gray-800 md:text-2xl">
+                  Connect with like-minded engineers through social, academic, philanthropic, and professional development opportunities.
+                </p>
+              </div>
+              <div className="block md:hidden mt-8 mb-20">
+                <AnimatedCard product={products[currentProductIndex]} isActive={isCardActive} />
+              </div>
+            </div>
+            <div className="hidden md:flex items-center justify-end">
+              <AnimatedCard product={products[currentProductIndex]} isActive={isCardActive} />
+            </div>
           </div>
         </div>
       </div>
@@ -129,7 +143,7 @@ export const HomeHeroParallax = ({
           translateY,
           opacity,
         }}
-        className="relative z-20"
+        className="relative z-20 hidden md:block"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
@@ -159,33 +173,6 @@ export const HomeHeroParallax = ({
           ))}
         </motion.div>
       </motion.div>
-    </div>
-  );
-};
-
-export const Header = () => {
-  return (
-    <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg md:flex-shrink-0 z-20 pt-40">
-      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-8xl text-black">
-        Theta Tau
-      </h2>
-      <p className="mt-4 text-gray-800 md:text-xl">
-        Connect with like-minded engineers through social, academic, philanthropic, and professional development opportunities.
-      </p>
-      <div className="w-full max-w-sm space-y-2 mt-6">
-        <form className="flex flex-col sm:flex-row gap-2">
-          <Input
-            type="email"
-            placeholder="Enter your email"
-            className="max-w-lg flex-1"
-            aria-label="Email for notifications"
-          />
-          <Button type="submit">Subscribe</Button>
-        </form>
-        <p className="text-xs text-gray-800">
-          Receive updates about recruitment events and important deadlines.
-        </p>
-      </div>
     </div>
   );
 };
@@ -224,7 +211,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-30 bg-black  pointer-events-none"></div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-30 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white text-2xl">
         {product.title}
       </h2>

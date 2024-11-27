@@ -7,9 +7,9 @@ export function RecruitmentHero() {
     const imageUrl = "/20240217_185909_729EA7.jpeg";
 
     return (
-        <div className="h-[80vh] bg-white container max-w-7xl mx-auto ">
-            <div className="h-full flex items-center justify-between gap-8">
-                <div className="flex-1 space-y-8">
+        <div className="h-[80vh] bg-white container max-w-7xl mx-auto">
+            <div className="h-full md:flex md:items-center md:justify-between md:gap-8">
+                <div className="flex-1 space-y-8 pt-20 md:pt-0">
                     <div className="space-y-4">
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-black">
                             Rush Theta Tau
@@ -37,14 +37,13 @@ export function RecruitmentHero() {
                         </form>
                     </div>
                 </div>
-                <div className="hidden md:flex items-center justify-end">
-                    <div className="w-[600px] h-[600px]">
+                <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end">
+                    <div className="w-full md:w-[600px] h-[400px] md:h-[600px]">
                         <DirectionAwareHover
                             imageUrl={imageUrl}
                             className="w-full h-full"
                         >
                             <div className="space-y-2">
-                                <p className="font-bold text-xl">Rush!</p>
                             </div>
                         </DirectionAwareHover>
                     </div>
