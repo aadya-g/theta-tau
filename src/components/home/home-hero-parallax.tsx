@@ -123,7 +123,7 @@ export const HomeHeroParallax = ({
                   Theta Tau
                 </h2>
                 <p className="mt-4 text-gray-800 md:text-2xl">
-                  Connect with like-minded engineers through social, academic, philanthropic, and professional development opportunities.
+                  Connect with like-minded engineers through brotherhood, academic, philanthropic, and professional development opportunities.
                 </p>
               </div>
               <div className="block md:hidden mt-8 mb-20">

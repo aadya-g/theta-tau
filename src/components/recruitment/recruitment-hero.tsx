@@ -29,7 +29,7 @@ export function RecruitmentHero() {
                         </p>
                     </div>
                 </div>
-                <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end">
+                <div className="mt-8 md:mt-16 flex items-center justify-center md:justify-end">
                     <div className="w-full md:w-[600px] h-[400px] md:h-[600px]">
                         <DirectionAwareHover
                             imageUrl={imageUrl}
