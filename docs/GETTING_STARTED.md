@@ -26,19 +26,18 @@ This guide will walk you through the process of setting up your own copy of the 
    - This document contains all necessary credentials and access details
    - Use the Vercel account credentials provided in the document to log in at [Vercel](https://vercel.com)
    - If you haven't received access to this document, contact your chapter's leadership
-
-2. **Fork and Connect Repository**
-   - Fork this repository to your chapter's GitHub organization
-   - Go to your Vercel dashboard
+     
+2. **Connect Repository Host on Vercel**
+   - Go to Theta Tau's Vercel dashboard
    - Click the project "theta-tau"
    - Go to "Settings"
    - Under "Git" section, click "Connected Git Repository"
    - Click "Disconnect" from the current repository
    - Click "Connect Git Repository"
-   - Select your forked repository
+   - Select your forked repository from your GitHub account
    - Vercel will automatically detect it as a Next.js project
 
-3. **Override Previous Website**
+3. **Override Previous Website (if needed)**
    - In the Vercel project settings, go to "Domains"
    - You will see the existing domain configuration
    - Your deployment will automatically override the previous website
@@ -88,7 +87,7 @@ git push
 
 2. **Vercel Environment**
    - Go to your project settings in Vercel
-   - Navigate to "Environment Variables"
+   - Navigate to "Environment Variables" in settings
    - Add each required variable
    - Redeploy your project for changes to take effect
 
@@ -128,8 +127,8 @@ git push
 ## Need Help?
 
 If you encounter any issues:
-1. Check the [Vercel Documentation](https://vercel.com/docs)
-2. Review the [Next.js Deployment Guide](https://nextjs.org/docs/deployment)
+1. Ask ChatGPT or any AI chatbot
+2. Check the [Vercel Documentation](https://vercel.com/docs)
 3. Contact the previous website chair
 
 Happy coding!
