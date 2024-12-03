@@ -122,7 +122,7 @@ export default function Home() {
         "Advance your career through industry connections, technical workshops, and leadership opportunities. Gain practical experience and develop essential skills that prepare you for success in the engineering field.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white relative">
-          <img src="/20241027_172514_7FF17F.jpeg" alt="Professional Development" className="absolute inset-0 w-full h-full object-cover" />
+          <img src="/IMG_3889.jpg" alt="Professional Development" className="absolute inset-0 w-full h-full object-cover" />
         </div>
       ),
     },

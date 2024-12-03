@@ -112,7 +112,7 @@ export const HomeHeroParallax = ({
   return (
     <div
       ref={ref}
-      className="md:h-[290vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[310vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="relative bg-white min-h-screen flex items-center">
         <div className="container max-w-7xl mx-auto px-4 relative z-30 pb-20">
