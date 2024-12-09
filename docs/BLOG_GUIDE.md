@@ -6,9 +6,10 @@ This guide provides instructions for the Blog Chair on how to create and manage 
 
 ### Step 1: Create the Blog Post File
 
-1. Navigate to the `src/content/blog` directory
-2. Create a new Markdown file with the format: `YYYY-MM-DD-title-of-post.md`
-   - Example: `2024-01-15-winter-rush-recap.md`
+1. Navigate to the `src/content/blog` directory on the GitHub website.
+2. Click the "Add file" button, then choose "Create new file."
+3. Name your file with the format: `YYYY-MM-DD-title-of-post.md`.
+   - Example: `2024-01-15-winter-rush-recap.md`.
 
 ### Step 2: Add Front Matter
 
@@ -27,13 +28,13 @@ image: "/images/blog/your-image.jpg"
 
 Write your blog post content using Markdown formatting:
 
-- Use `#` for headings (## for h2, ### for h3, etc.)
-- Use `*` or `_` for *italics*
-- Use `**` or `__` for **bold**
-- Use `-` or `*` for bullet points
-- Use `1.` for numbered lists
-- Use `[text](url)` for links
-- Use `![alt text](image-url)` for images
+- Use `#` for headings (## for h2, ### for h3, etc.).
+- Use `*` or `_` for *italics*.
+- Use `**` or `__` for **bold**.
+- Use `-` or `*` for bullet points.
+- Use `1.` for numbered lists.
+- Use `[text](url)` for links.
+- Use `![alt text](image-url)` for images.
 
 Example:
 ```markdown
@@ -51,9 +52,10 @@ Last weekend, our chapter hosted the Winter Rush event. The turnout was amazing,
 
 ### Step 4: Adding Images
 
-1. Save your images in the `public/blog` directory
-2. Use descriptive names for your images (e.g., `winter-rush-2024.jpg`)
-3. Reference images in your blog post using the path `/blog/your-image.jpg`
+1. Navigate to the `public/blog` directory on the GitHub website.
+2. Click the "Add file" button, then upload your images.
+3. Use descriptive names for your images (e.g., `winter-rush-2024.jpg`).
+4. Reference the images in your blog post using the path `/blog/your-image.jpg`.
 
 #### Image Formatting Options
 
@@ -108,133 +110,48 @@ You have two ways to add images to your blog posts:
 - `max-h-40`: Sets maximum height
 - `object-cover`: Ensures image covers its container while maintaining aspect ratio
 
-### Step 5: Preview and Test
+### Step 5: Save Your Changes
 
-1. Run the development server:
-   ```bash
-   npm run dev
-   ```
-2. Visit `http://localhost:3000/blog` to preview your post
-3. Check that:
-   - All images load correctly
-   - Formatting appears as intended
-   - Links work properly
-
-## Getting Started with Git
-
-### Initial Setup
-
-1. Install Git on your computer if you haven't already:
-   - Download from [https://git-scm.com/downloads](https://git-scm.com/downloads)
-   - Follow the installation instructions for your operating system
-
-2. Configure Git with your information:
-   ```bash
-   git config --global user.name "Your Name"
-   git config --global user.email "your.email@example.com"
-   ```
-
-### Cloning the Repository
-
-1. Open Terminal (Mac/Linux) or Command Prompt/PowerShell (Windows)
-
-2. Navigate to where you want to store the project:
-   ```bash
-   cd Documents/Projects  # or your preferred directory
-   ```
-
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/[your-website-chair-github-username]/theta-tau.git
-   cd theta-tau
-   ```
-
-4. Install project dependencies:
-   ```bash
-   npm install
-   ```
-
-### Making Changes
-
-1. Always start by getting the latest changes:
-   ```bash
-   git pull origin main
-   ```
-
-2. Make your changes (add blog post, images, etc.)
-
-3. Check which files you've changed:
-   ```bash
-   git status
-   ```
-
-4. Stage your changes:
-   ```bash
-   git add .                                     # for all changes
-   ```
-
-5. Commit your changes with a descriptive message:
-   ```bash
-   git commit -m "Add blog post: Winter Rush 2024 Recap"
-   ```
-
-6. Push your changes to GitHub:
-   ```bash
-   git push origin main
-   ```
-
-### Common Git Commands
-
-- `git status`: Check the status of your changes
-- `git diff`: See detailed changes in files
-- `git log`: View commit history
-- `git pull`: Get latest changes from remote repository
-
-### Tips
-
-1. Always pull before making new changes
-2. Write clear commit messages
-3. Test your changes locally before pushing
-4. Ask the website chair for help if you encounter any Git issues
+1. Once your blog post is complete, scroll to the bottom of the GitHub editor.
+2. Add a commit message summarizing your changes (e.g., "Add Winter Rush 2024 Recap post").
+3. Choose "Commit directly to the main branch."
+4. Click "Commit changes."
 
 ## Best Practices
 
 1. **Images**
-   - Optimize images before uploading (compress large files)
-   - Use JPG for photos, PNG for graphics with transparency
-   - Keep image file sizes under 500KB when possible
+   - Optimize images before uploading (compress large files).
+   - Use JPG for photos, PNG for graphics with transparency.
+   - Keep image file sizes under 500KB when possible.
 
 2. **Content**
-   - Write engaging, clear content
-   - Include relevant images to break up text
-   - Use proper grammar and spelling
-   - Keep paragraphs concise
-   - Include a call-to-action when appropriate
+   - Write engaging, clear content.
+   - Include relevant images to break up text.
+   - Use proper grammar and spelling.
+   - Keep paragraphs concise.
+   - Include a call-to-action when appropriate.
 
 3. **SEO**
-   - Use descriptive titles
-   - Include relevant tags
-   - Write meaningful image alt text
-   - Add a clear meta description
+   - Use descriptive titles.
+   - Include relevant tags.
+   - Write meaningful image alt text.
+   - Add a clear meta description.
 
 ## Common Issues and Solutions
 
 ### Images Not Displaying
-- Verify the image path is correct
-- Check that the image exists in the correct directory
-- Ensure the image filename matches exactly (case-sensitive)
+- Verify the image path is correct.
+- Check that the image exists in the correct directory.
+- Ensure the image filename matches exactly (case-sensitive).
 
 ### Formatting Issues
-- Make sure there's a blank line between paragraphs
-- Check that front matter is properly formatted with three dashes (`---`)
-- Verify Markdown syntax is correct
+- Make sure there's a blank line between paragraphs.
+- Check that front matter is properly formatted with three dashes (`---`).
+- Verify Markdown syntax is correct.
 
 ## Need Help?
 
 If you encounter any issues or have questions:
-1. Use ChatGPT or any AI chatbot
-2. Ask the website chair
-2. Review the git commit history for examples of previous blog posts
-
-
-Remember to commit and push your changes to the repository after creating or updating blog posts!
+1. Use ChatGPT or any AI chatbot.
+2. Ask the website chair.
+3. Review the GitHub commit history for examples of previous blog posts.
