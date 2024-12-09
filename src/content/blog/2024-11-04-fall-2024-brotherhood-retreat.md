@@ -1,7 +1,7 @@
 
 ---
 title: "Fall 2024 Brotherhood Retreat"
-date: "2024-11-04"
+date: 2024-11-04
 author: "Elaine Wixted"
 image: "20240828_112338_74F3CE.JPEG"
 ---
