@@ -2,6 +2,20 @@
 
 This guide provides instructions for the Blog Chair on how to create and manage blog posts for the Theta Tau website.
 
+## Getting Started with GitHub
+
+### Step 1: Create a GitHub Account
+
+1. Go to [https://github.com/](https://github.com/).
+2. Click "Sign up" and follow the steps to create an account.
+3. Use an email address you check regularly.
+4. Choose a username and password that you will remember.
+
+### Step 2: Request Access to the Repository
+
+1. Once you have a GitHub account, ask the Website Chair to add you as a contributor to the Theta Tau website repository.
+2. Provide them with your GitHub username so they can grant you access.
+
 ## Creating a New Blog Post
 
 ### Step 1: Create the Blog Post File
