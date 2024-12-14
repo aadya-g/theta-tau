@@ -1,5 +1,5 @@
 ---
-title: "Meet the 2024 Pledge Class!"
+title: "Meet the Fall 2024 Pledge Class!"
 date: 2024-12-14
 author: "Elaine Wixted"
 image: "IMG_6621.jpg"
