@@ -17,7 +17,7 @@ export function RecruitmentFAQ() {
                         <AccordionTrigger>What is Theta Tau?</AccordionTrigger>
                         <AccordionContent>
                             Theta Tau is a professional engineering fraternity focused on developing
-                            social connections, personal and academic growth, as well as professional connections among
+                            connections, personal and academic growth, as well as professional connections among
                             engineering students at UW-Madison.
                         </AccordionContent>
                     </AccordionItem>
