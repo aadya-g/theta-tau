@@ -12,7 +12,7 @@ export default function Navbar() {
                         <div className="">
                             <div className="flex items-baseline space-x-4">
                                 <NavLink href="/recruitment">
-                                    <span className="text-lg">Recruitment</span>
+                                    <span className="text-lg">Rush</span>
                                 </NavLink>
                                 <NavLink href="/blog">
                                     <span className="text-lg">Blog</span>
