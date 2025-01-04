@@ -4,13 +4,13 @@ import { useRef, useCallback, useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const executives = [
-  { name: 'Ryan Hogan', position: 'Regent', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Bennett Kinney', position: 'Vice Regent', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Ben Levy', position: 'Corresponding Secretary', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Kate Briesemeister', position: 'Scribe', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Liam Gaiden', position: 'Treasurer', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Gianna McLeod', position: 'Treasurer', image: '/placeholder.svg?height=100&width=100' },
-  { name: 'Katie Mangus', position: 'Marshall', image: '/placeholder.svg?height=100&width=100' },
+  { name: 'Ryan Hogan', position: 'Regent', image: '/exec_headshots/Ryan_hogan.JPG?height=100&width=100' },
+  { name: 'Bennett Kinney', position: 'Vice Regent', image: '/exec_headshots/Bennett_Kinney.JPG?height=100&width=100' },
+  { name: 'Ben Levy', position: 'Corresponding Secretary', image: '/exec_headshots/Ben_Levy.JPG?height=100&width=100' },
+  { name: 'Kate Briesemeister', position: 'Scribe', image: '/exec_headshots/Kate_Briesemeister.jpg?height=100&width=100' },
+  { name: 'Liam Gaiden', position: 'Treasurer', image: '/exec_headshots/Liam_Gaiden.jpg?height=100&width=100' },
+  { name: 'Gianna McLeod', position: 'Treasurer', image: '/exec_headshots/Gianna_McLeod.jpg?height=100&width=100' },
+  { name: 'Katie Mangus', position: 'Marshall', image: '/exec_headshots/Katie_Mangus.JPG?height=100&width=100' },
   { name: 'Ike Fritz', position: 'Marshall', image: '/placeholder.svg?height=100&width=100' },
 ]
 
@@ -21,17 +21,17 @@ const pillars = [
 ]
 
 const xiChapterImages = [
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
+  '/ttbanquet.jpg?height=400&width=600',
+  '/elections.jpg?height=400&width=600',
+  '/advisor_dinner.jpg?height=400&width=600',
+  '/fall24elections.jpg?height=400&width=600',
 ]
 
 const historyImages = [
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
-  '/placeholder.svg?height=400&width=600',
+  '/banquetpic.jpg?height=400&width=600',
+  '/electionscandid.JPG?height=400&width=600',
+  '/retreatpic.jpg?height=400&width=600',
+  '/banquetpic1.jpg?height=400&width=600',
 ]
 
 function ImageCarousel({ images, name }: { images: string[], name: string }) {
