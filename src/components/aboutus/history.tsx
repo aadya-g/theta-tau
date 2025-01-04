@@ -6,7 +6,7 @@ import Image from 'next/image'
 const historyImages = [
     '/banquetpic.jpg?height=400&width=600',
     '/electionscandid.JPG?height=400&width=600',
-    '/retreatpic.jpg?height=400&width=600',
+    '/retreatpic.JPG?height=400&width=600',
     '/banquetpic1.jpg?height=400&width=600',
   ]
 

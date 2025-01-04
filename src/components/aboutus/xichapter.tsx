@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const xiChapterImages = [
     '/ttbanquet.jpg?height=400&width=600',
-    '/elections.jpg?height=400&width=600',
+    '/elections.JPG?height=400&width=600',
     '/advisor_dinner.jpg?height=400&width=600',
     '/fall24elections.jpg?height=400&width=600',
   ]
@@ -72,4 +72,3 @@ export function XiChapter() {
       </section>
       )
     }
-    
