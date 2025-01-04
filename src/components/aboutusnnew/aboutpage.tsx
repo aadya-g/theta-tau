@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const executives = [
@@ -20,6 +20,51 @@ const pillars = [
   { title: 'Brotherhood', description: 'Members of Theta Tau have made friendships and connections that they will maintain for the rest of their lives.' },
 ]
 
+const xiChapterImages = [
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+]
+
+const historyImages = [
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+]
+
+function ImageCarousel({ images, name }: { images: string[], name: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [images.length])
+
+  return (
+    <div className="relative overflow-hidden rounded-lg shadow-md">
+      <div 
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`${name} Image ${index + 1}`}
+            width={600}
+            height={400}
+            className="flex-shrink-0"
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Page() {
     const executivesRef = useRef<HTMLElement>(null)
     const xiChapterRef = useRef<HTMLElement>(null)
@@ -31,11 +76,11 @@ export default function Page() {
     }, [])
   
     return (
-      <div className="relative min-h-screen bg-gradient-to-br from-red-100 to-white-100">
+      <div className="relative min-h-screen bg-white">
         {/* Main Content */}
         <div className="relative min-h-screen">
           <div className="container mx-auto px-4 py-12">
-            <h1 className="text-5xl font-bold mb-8 text-center">About Us</h1>
+            <h1 className="text-5xl font-bold mb-8 text-center text-red-800">About Us</h1>
   
             <nav className="mb-12">
               <ul className="flex flex-wrap justify-center gap-4">
@@ -48,7 +93,7 @@ export default function Page() {
                   <li key={index}>
                     <button 
                       onClick={() => scrollToSection(item.ref)}
-                      className="px-6 py-2 bg-white rounded-full shadow-md text-red-600 hover:bg-red-600 hover:text-white transition-colors duration-300"
+                      className="px-6 py-2 bg-red-50 rounded-full shadow-md text-red-700 hover:bg-red-700 hover:text-white transition-colors duration-300"
                     >
                       {item.text}
                     </button>
@@ -58,45 +103,39 @@ export default function Page() {
             </nav>
   
             <section ref={executivesRef} className="mb-16">
-              <h2 className="text-3xl font-semibold mb-6 text-center text-red-900">Our Executive Board</h2>
+              <h2 className="text-3xl font-semibold mb-6 text-center text-red-800">Our Executive Board</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {executives.map((exec, index) => (
-                  <div key={index} className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+                  <div key={index} className="flex flex-col items-center p-4 bg-red-50 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
                     <Image
                       src={exec.image}
                       alt={exec.name}
                       width={100}
                       height={100}
-                      className="rounded-full mb-4"
+                      className="rounded-full mb-4 border-2 border-red-300"
                     />
-                    <h3 className="font-semibold text-lg">{exec.name}</h3>
-                    <p className="text-sm text-gray-600">{exec.position}</p>
+                    <h3 className="font-semibold text-lg text-red-700">{exec.name}</h3>
+                    <p className="text-sm text-red-600">{exec.position}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section ref={xiChapterRef} className="mb-16">
-              <h2 className="text-3xl font-semibold mb-6 text-center text-red-900">Xi Chapter</h2>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h2 className="text-3xl font-semibold mb-6 text-center text-red-800">Xi Chapter</h2>
+              <div className="bg-red-50 p-8 rounded-lg shadow-lg">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                   <div className="w-full md:w-1/3">
-                    <Image
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Xi Chapter"
-                      width={600}
-                      height={400}
-                      className="rounded-lg shadow-md w-full"
-                    />
+                    <ImageCarousel images={xiChapterImages} name="Xi Chapter" />
                   </div>
                   <div className="w-full md:w-2/3">
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-black-700 mb-4">
                       The Xi Chapter of Theta Tau was founded at the University of Wisconsin-Madison on May 15, 1920. For over a century, our chapter has been a cornerstone of engineering excellence and professional development on campus.
                     </p>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-black-700 mb-4">
                       Throughout our history, Xi Chapter has produced numerous distinguished alumni who have made significant contributions to the field of engineering and beyond. Our members have gone on to become industry leaders, innovators, and educators.
                     </p>
-                    <p className="text-gray-700">
+                    <p className="text-black-700">
                       Today, Xi Chapter continues to uphold the values and traditions of Theta Tau while adapting to the ever-changing landscape of engineering. We are committed to fostering a diverse and inclusive community of future engineers who will shape the world of tomorrow.
                     </p>
                   </div>
@@ -105,45 +144,39 @@ export default function Page() {
             </section>
   
             <section ref={pillarsRef} className="mb-16">
-              <h2 className="text-3xl font-semibold mb-6 text-center text-red-900">Our Pillars</h2>
+              <h2 className="text-3xl font-semibold mb-6 text-center text-red-800">Our Pillars</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                 {pillars.map((pillar, index) => (
                   <div 
                     key={index} 
-                    className="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                    className="bg-red-50 p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                   >
-                    <h3 className="font-semibold mb-3 text-xl text-red-900">{pillar.title}</h3>
-                    <p className="text-gray-700">{pillar.description}</p>
+                    <h3 className="font-semibold mb-3 text-xl text-red-700">{pillar.title}</h3>
+                    <p className="text-black-600">{pillar.description}</p>
                   </div>
                 ))}
               </div>
             </section>
   
             <section ref={historyRef} className="mb-16">
-              <h2 className="text-3xl font-semibold mb-6 text-center text-red-900">Our History</h2>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h2 className="text-3xl font-semibold mb-6 text-center text-red-800">Our History</h2>
+              <div className="bg-red-50 p-8 rounded-lg shadow-lg">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                   <div className="w-full md:w-2/3">
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-black-700 mb-4">
                       Theta Tau is the oldest and largest co-ed professional engineering fraternity in the United States.
                       Since its founding at the University of Minnesota in 1904, we have shaped the engineering profession
                       by fostering brotherhood among engineering students and professionals. Theta Tau was founded at the 
                       University of Minnesota by Erich J. Schrader, Elwin L. Vinal, William M. Lewis, and Isaac B. Hanks.
                     </p>
-                    <p className="text-gray-700">                        
+                    <p className="text-black-700">                        
                       Our organization emphasizes professional development, academic excellence, personal integrity, and a
                       strong sense of fraternal brotherhood. Through our three pillars of professional development, service,
                       and brotherhood, we cultivate leaders who make lasting impacts in their communities and the engineering field.
                     </p>
                   </div>
                   <div className="w-full md:w-1/3">
-                    <Image
-                      src="/placeholder.svg?height=400&width=600"
-                      alt="Theta Tau History"
-                      width={600}
-                      height={400}
-                      className="rounded-lg shadow-md w-full"
-                    />
+                    <ImageCarousel images={historyImages} name="Theta Tau History" />
                   </div>
                 </div>
               </div>
@@ -153,4 +186,3 @@ export default function Page() {
       </div>
     )
   }
-

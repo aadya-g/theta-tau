@@ -136,11 +136,11 @@ export default function Home() {
       {/* About Section */}
       <HomeAboutSection content={content} />
 
-      {/* Blog Section */}
-      <HomeBlogSection />
-
       {/* Alumni Section */}
       <HomeOurNetwork />
+
+      {/* Blog Section */}
+      <HomeBlogSection />
 
       {/* Bottom CTA */}
       <HomeCTA />
