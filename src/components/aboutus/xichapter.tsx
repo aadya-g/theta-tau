@@ -58,7 +58,7 @@ export function XiChapter() {
             </div>
             <div className="w-full md:w-2/3">
               <p className="text-black-700 mb-4">
-                The Xi Chapter of Theta Tau was founded at the University of Wisconsin-Madison on May 15, 1920. For over a century, our chapter has been a cornerstone of engineering excellence and professional development on campus.
+                The Xi Chapter of Theta Tau was founded at the University of Wisconsin-Madison on January 13, 1923. For over a century, our chapter has been a cornerstone of engineering excellence and professional development on campus.
               </p>
               <p className="text-black-700 mb-4">
                 Throughout our history, Xi Chapter has produced numerous distinguished alumni who have made significant contributions to the field of engineering and beyond. Our members have gone on to become industry leaders, innovators, and educators.
