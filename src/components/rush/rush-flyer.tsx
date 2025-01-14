@@ -17,7 +17,7 @@ export default function RushFlyer() {
                   alt="Rush Flyer"
                   className="object-cover"
                   height="300"
-                  src="/Fall-24-Rush-Flyer-Color-v4-667x1024.png?height=300&width=400"
+                  src="/Fall-24-Rush-Flyer-Color-v4-667x1024.png"
                   style={{
                     aspectRatio: "4/3",
                     objectFit: "cover",

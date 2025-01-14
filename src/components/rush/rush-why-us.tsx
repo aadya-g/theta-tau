@@ -8,7 +8,7 @@ export default function RushWhyUs() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/2 space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Why Join Epsilon Pi Tau?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Why Join Theta Tau?</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     Theta Tau offers a unique blend of professional development, philanthropic service, and lifelong brotherhood. As a member, you'll join a community of like-minded engineers who support and inspire each other to reach new heights in their careers and personal lives.
