@@ -5,7 +5,7 @@ import { DirectionAwareHover } from "../ui/direction-aware-hover";
 import { EmailCollector } from "@/lib/email-collector";
 
 export function RecruitmentHero() {
-    const imageUrl = "/Spring25Rush.jpeg";
+    const imageUrl = "/20240217_185909_729EA7.jpeg";
 
     return (
         <div className="h-[80vh] bg-white container max-w-7xl mx-auto">
