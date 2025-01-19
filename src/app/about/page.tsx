@@ -5,23 +5,7 @@ import { OurHistory } from "@/components/aboutus/history"
 import Header from '@/components/aboutus/header';
 import React from 'react'
 import Page from "@/components/aboutus/aboutpage";
-
-// export default function AboutUs() {
-//     return (
-//         <div className="min-h-screen bg-background">
-//             {/* ExecBoard*/}
-//                 <ExecBoard />
-//             {/* Xi Chapter*/}
-//                 <XiChapter />
-//             {/* Pillars */}
-//                 <Pillars />
-//             {/* Our History*/}
-//                 <OurHistory />
-//         </div>
-
-//     )
-// }
-        
+  
 export default function AboutUs() {
     return (
       <div>
