@@ -27,7 +27,7 @@ export default function RushWhyUs() {
                   alt="Theta Tau members"
                   className="object-cover"
                   height="600"
-                  src="/20240217_185909_729EA7.jpeg?height=600&width=600"
+                  src="/20240128_175030_71EB21-1024x768.jpeg?height=600&width=600"
                   style={{
                     aspectRatio: "1/1",
                     objectFit: "cover",

@@ -47,21 +47,19 @@ export default function RushImage() {
               }}
             >
               {[
-                { alt: "Theta Tau social event", text: "Social Event" },
-                { alt: "Theta Tau workshop", text: "Workshop" },
-                { alt: "Theta Tau alumni meetup", text: "Alumni Meetup" },
-                { alt: "Theta Tau campus event", text: "Campus Event" },
-                { alt: "Theta Tau hackathon", text: "Hackathon" },
-                { alt: "Theta Tau career fair", text: "Career Fair" },
-                { alt: "Theta Tau study group", text: "Study Group" },
-                { alt: "Theta Tau volunteer work", text: "Volunteer Work" }
+                { alt: "comm serve", src: "/thumbnail_IMG_4179-1024x768.jpg" },
+                { alt: "Theta Tau workshop", src: "/20241028_205300_70BC9E.jpeg.jpeg" },
+                { alt: "Theta Tau alumni meetup", src: "/20240827_174150_7A6F7D.jpeg" },
+                { alt: "Theta Tau campus event", src: "/10861.jpg.jpg" },
+                { alt: "Theta Tau hackathon", src: "/20240908_204437_752C9A.jpeg" },
+                { alt: "Theta Tau career fair", src: "/public/IMG_4185-1024x768.jpg.jpg" },
               ].map((item, index) => (
                 <div key={index} className="flex-shrink-0 w-64 h-64 overflow-hidden rounded-xl">
                   <Image
                     alt={item.alt}
                     className="object-cover w-full h-full"
                     height="300"
-                    src={`/placeholder.svg?height=300&width=300&text=${item.text.replace(' ', '+')}`}
+                    src={`/placeholder.svg?height=300&width=300&text=${item.src.replace(' ', '+')}`}
                     width="300"
                   />
                 </div>
