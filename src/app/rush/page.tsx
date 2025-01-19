@@ -1,5 +1,5 @@
 import RushFlyer  from "@/components/rush/rush-flyer"
-import  RushHeader  from "@/components/rush/rush-header"
+import { RecruitmentHero } from "@/components/recruitment/recruitment-hero"
 import  RushWhyUs  from "@/components/rush/rush-why-us"
 import RushVideo from "@/components/rush/rush-video"
 import RushInstagram from "@/components/rush/rush-instagram"
@@ -11,8 +11,8 @@ export default function AboutUs() {
     return (
       <div>
         <main>
-          <section id="rush-header">
-            < RushHeader/>
+        <section id="recruitment-header">
+          <RecruitmentHero />
           </section>
           <section id="rush-flyer">
             <RushFlyer />
@@ -26,11 +26,11 @@ export default function AboutUs() {
           <section id="rush-instagram">
             <RushInstagram />
           </section>
-          <section id="rush-faq">
-            <RushFAQ />
-          </section>
           <section id="rush-image">
             <RushImage />
+          </section>
+          <section id="rush-faq">
+            <RushFAQ />
           </section>
         </main>
       </div>
