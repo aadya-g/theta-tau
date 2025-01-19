@@ -20,7 +20,7 @@ export default function RushWhyUs() {
                     We pride ourselves on our strong alumni network, which opens doors to internships, job opportunities, and mentorship from successful professionals in various engineering fields. By joining Theta Tau, you're not just part of a college organization- you're joining a lifelong community dedicated to advancing the engineering profession.
                   </p>
                 </div>
-                <Button size="lg" className="mt-4">Learn More About ΕΠΤ</Button>
+                <Button size="lg" className="mt-4">Learn More About θΤ</Button>
               </div>
               <div className="md:w-1/2 aspect-square overflow-hidden rounded-xl">
                 <Image
