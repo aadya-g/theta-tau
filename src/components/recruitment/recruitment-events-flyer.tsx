@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 export function RecruitmentEventsFlyer() {
-    const imageUrl = "/Fall-24-Rush-Flyer-Color-v4-667x1024.png";
+    const imageUrl = "/Spring25Rush.jpeg";
 
     return (
         <section className="container max-w-7xl mx-auto py-36">
