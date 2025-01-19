@@ -5,12 +5,12 @@ export default function RushFlyer() {
         <div className="min-h-screen bg-background flex flex-col">
             <section className="w-full py-12 md:py-24 bg-muted">
                 <div className="container px-4 md:px-6">
-                    <div className="space-y-4 text-center mb-8">
+                    {/* <div className="space-y-4 text-center mb-8">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Rush Flyer</h2>
                         <p className="text-muted-foreground">
                             Check out our official rush flyer for all the details about our upcoming events and how to get involved.
                         </p>
-                    </div>
+                    </div> */}
                     <div className="w-full overflow-hidden rounded-xl">
                         <Image
                             alt="Rush Flyer"

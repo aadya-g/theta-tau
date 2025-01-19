@@ -23,11 +23,11 @@ export default function AboutUs() {
           <section id="rush-video">
             <RushVideo />
           </section>
-          <section id="rush-instagram">
-            <RushInstagram />
-          </section>
           <section id="rush-image">
             <RushImage />
+          </section>
+          <section id="rush-instagram">
+            <RushInstagram />
           </section>
           <section id="rush-faq">
             <RushFAQ />
