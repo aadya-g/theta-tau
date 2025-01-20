@@ -14,7 +14,7 @@ export default function Navbar() {
                                 <NavLink href="/about">
                                     <span className="text-lg">About Us</span>
                                 </NavLink>
-                                <NavLink href="/recruitment">
+                                <NavLink href="/rush">
                                     <span className="text-lg">Rush</span>
                                 </NavLink>
                                 <NavLink href="/blog">
