@@ -9,8 +9,8 @@ export default function Recruitment() {
             {/* Hero Section */}
             <RecruitmentHero />
 
-            {/* Full viewport flyer section */}
-            <RecruitmentEventsFlyer />
+            {/* Full viewport flyer section
+            <RecruitmentEventsFlyer /> */}
 
             {/* Instagram Section */}
             <RecruitmentLinks />

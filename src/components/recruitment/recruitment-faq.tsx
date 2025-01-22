@@ -44,12 +44,7 @@ export function RecruitmentFAQ() {
                     <AccordionItem value="item-3">
                         <AccordionTrigger>What are the benefits of joining?</AccordionTrigger>
                         <AccordionContent>
-                            • Connection with engineering students across disciplines
-                            • Professional networking with engineering alumni and companies
-                            • Technical workshops and industry talks
-                            • Interview preparation and resume reviews
-                            • Access to internship and job opportunities
-                            • Leadership experience through chapter positions
+                            Joining an engineering fraternity offers numerous benefits that can significantly enhance both your academic and professional journey. It provides a unique opportunity to connect with engineering students across various disciplines, fostering collaboration and mutual support. Members gain access to professional networking opportunities with alumni and leading companies in the industry, along with technical workshops and industry talks that sharpen skills and expand knowledge. The fraternity also supports career development through interview preparation sessions and resume reviews, while offering exclusive access to internship and job opportunities. Additionally, members can develop leadership and organizational skills by taking on chapter positions, providing invaluable experience for future roles.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
