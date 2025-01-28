@@ -110,7 +110,7 @@ export function RecruitmentHero() {
                     </div>
                 </div>
                 <div className="mt-8 md:mt-16 flex items-center justify-center md:justify-end">
-                    <div className="w-full md:w-[650px] h-[450px] md:h-[650px] max-h-[650px] rounded-xl overflow-hidden border-4 border-transparent mb-8">
+                    <div className="w-full md:w-[650px] h-[400px] md:h-[650px] max-h-[650px] rounded-xl overflow-hidden border-4 border-transparent mb-8 md:mb-0">
                         <Image
                             src={imageUrl}
                             alt="Rush Theta Tau"
