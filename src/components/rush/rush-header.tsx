@@ -110,7 +110,7 @@ export function RecruitmentHero() {
                     </div>
                 </div>
                 <div className="mt-8 md:mt-16 flex items-center justify-center md:justify-end">
-                    <div className="w-full md:w-[650px] h-[450px] md:h-[650px] rounded-xl overflow-hidden">
+                    <div className="w-full md:w-[650px] h-[450px] md:h-[650px] rounded-xl overflow-hidden border-4 border-transparent">
                         <Image
                             src={imageUrl}
                             alt="Rush Theta Tau"
@@ -120,6 +120,10 @@ export function RecruitmentHero() {
                         />
                     </div>
                 </div>
+            </div>
+            {/* Add spacing to ensure the next section doesn't overlap */}
+            <div className="mt-16">
+                {/* Your next section content goes here */}
             </div>
         </div>
     );
