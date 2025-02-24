@@ -82,7 +82,7 @@ export function RecruitmentHero() {
     const imageUrl = "/Spring25Rush.jpeg";
 
     return (
-        <div className="h-[80vh] bg-white container max-w-7xl mx-auto relative pb-16">
+        <div className="h-[80vh] bg-white container max-w-7xl mx-auto relative">
             {/* Aura Blobs */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-pink-300 rounded-full opacity-50 animate-blob z-0"></div>
             <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-red-400 rounded-full opacity-50 animate-blob z-0"></div>
@@ -111,7 +111,7 @@ export function RecruitmentHero() {
                     </div>
                 </div>
                 <div className="mt-8 md:mt-16 flex items-center justify-center md:justify-end">
-                    <div className="w-full md:w-[650px] h-[400px] md:h-[650px] max-h-[650px] rounded-xl overflow-hidden border-4 border-transparent mb-16 md:mb-0">
+                    <div className="w-full md:w-[650px] h-[400px] md:h-[650px] max-h-[650px] rounded-xl overflow-hidden border-4 border-transparent mb-8 md:mb-0">
                         <Image
                             src={imageUrl}
                             alt="Rush Theta Tau"
@@ -123,7 +123,7 @@ export function RecruitmentHero() {
                 </div>
             </div>
             {/* Add spacing to ensure the next section doesn't overlap */}
-            <div className="mt-32">
+            <div className="mt-16">
                 {/* Your next section content goes here */}
             </div>
         </div>
