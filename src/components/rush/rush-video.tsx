@@ -9,9 +9,12 @@ export default function RushVideo() {
             <div className="absolute top-5 left-1/4 w-32 h-32 bg-pink-300 rounded-full opacity-50 animate-blob z-0"></div>
             <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-red-400 rounded-full opacity-50 animate-blob z-0"></div>
             <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-orange-400 rounded-full opacity-50 animate-blob z-0"></div>
-            <div className="absolute bottom-16 right-5 w-36 h-36 bg-pink-600 rounded-full opacity-50 animate-blob z-0"></div>
-
+            <div className="absolute bottom-16 right-5 w-36 h-36 bg-pink-600 rounded-full opacity-50 animate-blob z-0"></div> 
+            
             <section id="rush-video" className="w-full py-12 md:py-24 z-10 relative">
+                <div className="mt-32">
+                    {/* Your next section content goes here */}
+                </div>
                 <div className="container px-4 md:px-6">
                     <div className="flex flex-col items-center space-y-4 text-center">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">
