@@ -12,7 +12,7 @@ export default function RushVideo() {
             <div className="absolute bottom-16 right-5 w-36 h-36 bg-pink-600 rounded-full opacity-50 animate-blob z-0"></div> 
             
             <section id="rush-video" className="w-full py-12 md:py-24 z-10 relative">
-                <div className="mt-32">
+                <div className="mt-40">
                     {/* Your next section content goes here */}
                 </div>
                 <div className="container px-4 md:px-6">
