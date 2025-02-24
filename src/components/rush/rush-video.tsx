@@ -32,7 +32,7 @@ export default function RushVideo() {
                             ></iframe>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Watch our 2024 Rush Video
+                            Watch our Spring 2025 Rush Video
                         </p>
                     </div>
                 </div>

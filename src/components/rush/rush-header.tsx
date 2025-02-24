@@ -96,7 +96,8 @@ export function RecruitmentHero() {
                             Rush Theta Tau
                         </h1>
                         <p className="text-gray-600 md:text-xl max-w-[600px]">
-                            Learn about our community of engineers, and discover opportunities in leadership and service.
+                        Spring 2025 rush has been completed. If you are interested in rushing in the fall, follow our instagram for more information and enter your email to get notified about rush. 
+                        {/* Learn about our community of engineers, and discover opportunities in leadership and service. */}
                         </p>
                     </div>
                     <div className="w-full max-w-sm space-y-2">
