@@ -123,7 +123,7 @@ export function RecruitmentHero() {
                 </div>
             </div>
             {/* Add spacing to ensure the next section doesn't overlap */}
-            <div className="mt-16">
+            <div className="mt-32">
                 {/* Your next section content goes here */}
             </div>
         </div>
