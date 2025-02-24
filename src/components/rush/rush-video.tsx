@@ -11,32 +11,32 @@ export default function RushVideo() {
             <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-orange-400 rounded-full opacity-50 animate-blob z-0"></div>
             <div className="absolute bottom-16 right-5 w-36 h-36 bg-pink-600 rounded-full opacity-50 animate-blob z-0"></div>
 
-            <section id="rush-video" className="w-full py-12 md:py-24 z-10 relative">
+            <section id="rush-video" className="w-full py-12 md:py-24">
                 <div className="container px-4 md:px-6">
                     <div className="flex flex-col items-center space-y-4 text-center">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">
-                            Experience θΤ Rush
-                        </h2>
-                        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                            Get a glimpse of what it's like to be part of Theta Tau. Watch our rush video and see why we're more than just a fraternity.
-                        </p>
-                        <div className="w-full max-w-4xl aspect-video overflow-hidden rounded-xl border bg-muted">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://youtube.com/embed/manQodkwLmA"
-                                title="Theta Tau Rush Video"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                            Watch our Spring 2025 Rush Video
-                        </p>
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black">
+                        Experience θΤ Rush
+                    </h2>
+                    <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                        Get a glimpse of what it's like to be part of Theta Tau. Watch our rush video and see why we're more than just a fraternity.
+                    </p>
+                    <div className="w-full max-w-4xl aspect-video overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+                        <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://youtube.com/embed/manQodkwLmA"
+                        title="Theta Tau Rush Video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        ></iframe>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                        Watch our Spring 2025 Rush Video
+                    </p>
                     </div>
                 </div>
-            </section>
+             </section>
         </div>
     );
 }
