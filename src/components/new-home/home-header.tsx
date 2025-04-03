@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from 'lucide-react'
+import Link from "next/link"
+
 
 export function HeroSection() {
   return (
@@ -16,21 +18,19 @@ export function HeroSection() {
               development, and lifelong connections.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button className="bg-[#8B0000] hover:bg-[#a50000] text-white">
-                Learn More
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" className="border-[#8B0000] text-[#ff6b6b] hover:bg-[#8B0000]/10">
-                Join Our Community
-              </Button>
+            <Link href="/rush" passHref>
+                <Button variant="outline" className="border-[#8B0000] text-[#ff6b6b] hover:bg-[#8B0000]/10">
+                  Join Our Community
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center">
             <Image
               src="/ttbanquet.jpg?height=400&width=600"
               alt="Engineering students collaborating"
-              width={800}
-              height={600}
+              width={900}
+              height={700}
               className="rounded-lg object-cover border border-[#3d0c0c]"
               priority
             />
