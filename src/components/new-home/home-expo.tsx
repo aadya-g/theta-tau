@@ -6,51 +6,65 @@ export function EngineeringExpoSection() {
   return (
     <section id="expo" className="w-full py-12 md:py-24 bg-[#2a0808]">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-[#8B0000] px-3 py-1 text-sm text-white">Coming Soon</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-              Theta Tau Engineering Expo Project 2025
-            </h2>
-            <p className="max-w-[700px] text-gray-300 md:text-xl">
-              Visit our booth at  us for the biggest engineering showcase of the year.
-            </p>
-          </div>
-        </div>
-        <div className="mx-auto max-w-3xl mt-8">
-          <div className="overflow-hidden rounded-lg border border-[#3d0c0c] bg-[#1a0505] shadow-xl">
-            <div className="bg-[#8B0000] text-white p-6 text-center">
-              <h3 className="text-2xl font-bold">Engineering Expo 2025</h3>
-              <p className="text-lg mt-2">April 11-12, 2025 • Engineering Hall</p>
+        <div className="grid gap-8 lg:grid-cols-2 items-start">
+          {/* Left side - Section text */}
+          <div className="flex flex-col space-y-4">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-[#8B0000] px-3 py-1 text-sm text-white">Coming Soon</div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+                Engineering Expo Project 2025
+              </h2>
+              <p className="text-gray-300 md:text-xl">
+                Join us for the biggest engineering showcase of the year. Network with industry leaders, see
+                cutting-edge projects, and explore career opportunities.
+              </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 p-6">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <h4 className="text-xl font-semibold text-white">The Launching Legends</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
-                      <span className="text-gray-200">Student project showcase</span>
-                    </li>
-                    <li className="flex items-start">
-                      <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
-                      <span className="text-gray-200">Cutting-edge projects</span>
-                    </li>
-                    <li className="flex items-start">
-                      <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
-                      <span className="text-gray-200">Spark curiositys</span>
-                    </li>
-                  </ul>
+
+            <div className="overflow-hidden rounded-lg border border-[#3d0c0c] bg-[#1a0505] shadow-xl mt-6 p-6">
+              <h3 className="text-xl font-bold text-white mb-4">Event Highlights</h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Learn about cutting edge projects</span>
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Student project showcase</span>
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Spark Curiosity</span>
+                </li>
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-5 w-5 text-[#ff6b6b]" />
+                  <span className="text-gray-200">April 11-12, 2025</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-[#ff6b6b]" />
+                  <span className="text-gray-200">Open to all</span>
                 </div>
               </div>
-              <div>
-                <Image
-                  src="/Sp25_expo.PNG?height=300&width=400"
-                  alt="Engineering Expo"
-                  width={400}
-                  height={300}
-                  className="rounded-lg object-cover h-full border border-[#3d0c0c]"
-                />
+            </div>
+          </div>
+
+          {/* Right side - Just an image */}
+          <div className="flex items-center justify-center">
+            <div className="relative overflow-hidden rounded-lg border-4 border-[#8B0000] shadow-2xl">
+              <Image
+                src="/Sp25_expo.PNG?height=800&width=600"
+                alt="Engineering Expo Flyer"
+                width={600}
+                height={800}
+                className="object-cover"
+                priority
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1a0505] to-transparent p-6">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-white">Engineering Expo 2025</h3>
+                  <p className="text-gray-200">Engineering Hall</p>
+                </div>
               </div>
             </div>
           </div>
