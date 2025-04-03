@@ -160,6 +160,7 @@ import React from 'react'
 import {HomeOurNetwork} from  "@/components/new-home/home-network"
 import {HeroSection} from  "@/components/new-home/home-header"
 import {EngineeringExpoSection} from  "@/components/new-home/home-expo"
+import {ContactSection} from  "@/components/new-home/home-contacts"
 
 export default function AboutUs() {
     return (
@@ -191,6 +192,9 @@ export default function AboutUs() {
           </section>
           <section id="home-network">
             <HomeOurNetwork />
+          </section>
+          <section id="home-contact">
+            <ContactSection />
           </section>
         </main>
       </div>

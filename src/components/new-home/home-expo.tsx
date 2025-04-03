@@ -15,8 +15,8 @@ export function EngineeringExpoSection() {
                 Engineering Expo Project 2025
               </h2>
               <p className="text-gray-300 md:text-xl">
-                Join us for the biggest engineering showcase of the year. Network with industry leaders, see
-                cutting-edge projects, and explore career opportunities.
+              Join us at the Engineering Expo at UW-Madison! Visit our booth and discover the thrill of rocketry. Learn hands-on how to launch rockets 
+              and explore the exciting world of engineering. Don't miss out on this opportunity to ignite your curiosity and soar to new heights!
               </p>
             </div>
 
@@ -34,6 +34,10 @@ export function EngineeringExpoSection() {
                 <li className="flex items-start">
                   <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
                   <span className="text-gray-200">Spark Curiosity</span>
+                </li>
+                <li className="flex items-start">
+                  <ChevronRight className="mr-2 h-5 w-5 text-[#ff6b6b] shrink-0 mt-0.5" />
+                  <span className="text-gray-200">Participate in hands on projects</span>
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
