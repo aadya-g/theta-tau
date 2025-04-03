@@ -159,6 +159,7 @@ import { RushFAQ }  from "@/components/rush/rush-faq"
 import React from 'react'
 import {HomeOurNetwork} from  "@/components/new-home/home-network"
 import {HeroSection} from  "@/components/new-home/home-header"
+import {EngineeringExpoSection} from  "@/components/new-home/home-expo"
 
 export default function AboutUs() {
     return (
@@ -184,6 +185,9 @@ export default function AboutUs() {
           </section>
           <section id="home-header">
             <HeroSection />
+          </section>
+          <section id="home-expo">
+            <EngineeringExpoSection />
           </section>
           <section id="home-network">
             <HomeOurNetwork />
