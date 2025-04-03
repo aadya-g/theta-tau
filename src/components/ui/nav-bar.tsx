@@ -14,15 +14,15 @@ export default function Navbar() {
                                 <NavLink href="/about">
                                     <span className="text-lg">About Us</span>
                                 </NavLink>
-                                {/* <NavLink href="/rush">
+                                <NavLink href="/rush">
                                     <span className="text-lg">Rush</span>
-                                </NavLink> */}
+                                </NavLink>
                                 <NavLink href="/blog">
                                     <span className="text-lg">Blog</span>
                                 </NavLink>
-                                <NavLink href="/members">
+                                {/* <NavLink href="/members">
                                     <span className="text-lg">Members</span>
-                                </NavLink>
+                                </NavLink> */}
                             </div>
                         </div>
                     </div>

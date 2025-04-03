@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export function AboutSection() {
+export function HomeAboutSection() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-[#1a0505]">
       <div className="container px-4 md:px-6">
