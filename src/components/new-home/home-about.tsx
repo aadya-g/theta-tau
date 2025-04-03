@@ -9,7 +9,7 @@ export function HomeAboutSection() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex justify-center">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/20240908_150702_701104.jpeg?height=400&width=600"
               alt="Engineering fraternity members"
               width={600}
               height={400}
