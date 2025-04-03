@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#2a0808]]">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-[#2a0808] to-[#1a0505]">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-4">
