@@ -161,12 +161,13 @@ import {HomeOurNetwork} from  "@/components/new-home/home-network"
 import {HeroSection} from  "@/components/new-home/home-header"
 import {EngineeringExpoSection} from  "@/components/new-home/home-expo"
 import {ContactSection} from  "@/components/new-home/home-contacts"
+import { HomeAboutSection } from "@/components/new-home/home-about"
 
 export default function AboutUs() {
     return (
       <div>
         <main>
-        <section id="rush-header">
+        {/* <section id="rush-header">
           <RecruitmentHero />
           </section>
           <section id="rush-video">
@@ -183,9 +184,12 @@ export default function AboutUs() {
           </section>
           <section id="rush-faq">
             <RushFAQ />
-          </section>
+          </section> */}
           <section id="home-header">
             <HeroSection />
+          </section>
+          <section id="home-about">
+            <HomeAboutSection />
           </section>
           <section id="home-expo">
             <EngineeringExpoSection />
