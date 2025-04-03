@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Menu } from "lucide-react"
 
-export default function HomePage() {
+export default function HomeHeader() {
   const [scrollY, setScrollY] = useState(0)
   const headerRef = useRef<HTMLDivElement>(null)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -33,7 +33,7 @@ export default function HomePage() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: "url(/placeholder.svg?height=1080&width=1920)",
+              backgroundImage: "ttbanquet.jpg?height=1080&width=1920)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               transform: `translateY(${scrollY * 0.5}px)`,
