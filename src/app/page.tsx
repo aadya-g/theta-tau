@@ -157,6 +157,7 @@ import RushInstagram from "@/components/rush/rush-instagram"
 import RushImage from "@/components/rush/rush-image"
 import { RushFAQ }  from "@/components/rush/rush-faq"
 import React from 'react'
+import {HomeOurNetwork} from  "@/components/new-home/home-network"
 
 export default function AboutUs() {
     return (
@@ -179,6 +180,9 @@ export default function AboutUs() {
           </section>
           <section id="rush-faq">
             <RushFAQ />
+          </section>
+          <section id="home-network">
+            <HomeOurNetwork />
           </section>
         </main>
       </div>

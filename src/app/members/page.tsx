@@ -1,22 +1,22 @@
 import { RecruitmentEventsFlyer } from "@/components/recruitment/recruitment-events-flyer"
 import { RecruitmentFAQ } from "@/components/recruitment/recruitment-faq"
 import { RecruitmentHero } from "@/components/recruitment/recruitment-hero"
-import { RecruitmentLinks } from "@/components/recruitment/recruitment-links"
+import MembersPage from "@/components/members/members"
 
 export default function Recruitment() {
     return (
         <div className="min-h-screen bg-background">
-            {/* Hero Section */}
-            <RecruitmentHero />
+            {/* Members Section */}
+            <MembersPage />
 
             {/* Full viewport flyer section
-            <RecruitmentEventsFlyer /> */}
+            // <RecruitmentEventsFlyer /> */}
 
             {/* Instagram Section */}
-            <RecruitmentLinks />
+            {/* <RecruitmentLinks /> */}
 
             {/* FAQ Section */}
-            <RecruitmentFAQ />
+            {/* <RecruitmentFAQ /> */}
         </div>
     )
 }
