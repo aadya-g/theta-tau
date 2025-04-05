@@ -19,7 +19,7 @@ export function HomeAboutSection() {
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">About Theta Tau</h2>
             <p className="text-gray-300 md:text-lg">
-              Founded in 1923, Theta Tau is an professional engineering fraternity. Our
+              Founded in 1904, Theta Tau is an professional engineering fraternity. Our
               chapter focuses on fostering leadership, academic excellence, and professional development among
               engineering students.
             </p>

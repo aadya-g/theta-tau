@@ -162,6 +162,7 @@ import {HeroSection} from  "@/components/new-home/home-header"
 import {EngineeringExpoSection} from  "@/components/new-home/home-expo"
 import {ContactSection} from  "@/components/new-home/home-contacts"
 import { HomeAboutSection } from "@/components/new-home/home-about"
+import { HomeBlogSection } from "@/components/new-home/home-blog"
 
 export default function AboutUs() {
     return (
@@ -196,6 +197,9 @@ export default function AboutUs() {
           </section>
           <section id="home-network">
             <HomeOurNetwork />
+          </section>
+          <section id="home-blog">
+            <HomeBlogSection />
           </section>
           <section id="home-contact">
             <ContactSection />

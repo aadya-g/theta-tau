@@ -20,7 +20,7 @@ export function HeroSection() {
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Link href="/rush" passHref>
                 <Button variant="outline" className="border-[#8B0000] text-[#ff6b6b] hover:bg-[#8B0000]/10">
-                  Join Our Community
+                  Join Us
                 </Button>
               </Link>
             </div>
