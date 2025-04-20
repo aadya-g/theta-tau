@@ -192,9 +192,6 @@ export default function AboutUs() {
           <section id="home-about">
             <HomeAboutSection />
           </section>
-          <section id="home-expo">
-            <EngineeringExpoSection />
-          </section>
           <section id="home-network">
             <HomeOurNetwork />
           </section>
