@@ -4,10 +4,10 @@ import { useRef, useCallback, useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const xiChapterImages = [
-    '/datepartypic.jpeg?height=400&width=600',
+    '/ttbanquet.jpg?height=400&width=600',
     '/elections.JPG?height=400&width=600',
-    '/beaconcommserve.jpeg?height=400&width=600',
-    '/ike+katie_banquet.jpeg?height=400&width=600',
+    '/advisor_dinner.jpg?height=400&width=600',
+    '/ike+katie.jpeg?height=400&width=600',
   ]
 
 function ImageCarousel({ images, name }: { images: string[], name: string }) {
