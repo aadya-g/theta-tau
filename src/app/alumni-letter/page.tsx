@@ -21,7 +21,7 @@ export default function AlumniLetterPage() {
   const [pageNumber, setPageNumber] = useState<number>(1)
 
   // Path to your PDF file
-  const pdfUrl = "/Semester S25 Newsletter.pdf"
+  const pdfUrl = "/Semester-S25-Newsletter.pdf"
 
   function changePage(offset: number) {
     setPageNumber((prevPageNumber) => {
