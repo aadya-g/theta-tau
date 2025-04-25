@@ -12,7 +12,7 @@ export default async function Blog() {
         <div className="max-w-7xl mx-auto bg-white text-gray-900">
             <section className=" px-4 pt-32 pb-16">
                 <h1 className="text-6xl font-bold text-center mb-8">Blog</h1>
-                <p className="text-xl text-center mb-32">Read about our latest product and research announcements.</p>
+                <p className="text-xl text-center mb-32">Read about our events and learn more about what θT has to offer..</p>
 
                 {/* Featured Article */}
                 {featuredPost && <FeaturedBlogPost post={featuredPost} />}
