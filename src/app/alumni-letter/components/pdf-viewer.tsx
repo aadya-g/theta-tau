@@ -1,30 +1,29 @@
-"use client"
+import { useEffect, useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
 
-import { useEffect, useState } from "react"
-import { Document, Page, pdfjs } from "react-pdf"
-
-// Define props interface
 interface PDFViewerProps {
-  pdfUrl: string
-  pageNumber: number
-  onDocumentLoadSuccess: ({ numPages }: { numPages: number }) => void
+  pdfUrl: string;
+  pageNumber: number;
+  onDocumentLoadSuccess: ({ numPages }: { numPages: number }) => void;
 }
 
 export default function PDFViewer({ pdfUrl, pageNumber, onDocumentLoadSuccess }: PDFViewerProps) {
-  const [isClient, setIsClient] = useState(false)
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Only set up pdfjs on the client side
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
-    setIsClient(true)
-  }, [])
+    // Ensure this runs only in the browser
+    if (typeof window !== "undefined") {
+      pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+      setIsClient(true);
+    }
+  }, []);
 
   if (!isClient) {
     return (
       <div className="flex justify-center items-center h-[600px] w-full border border-red-800 shadow-md">
         <div className="animate-pulse text-red-700">Loading PDF viewer...</div>
       </div>
-    )
+    );
   }
 
   return (
@@ -51,5 +50,5 @@ export default function PDFViewer({ pdfUrl, pageNumber, onDocumentLoadSuccess }:
         width={600}
       />
     </Document>
-  )
+  );
 }

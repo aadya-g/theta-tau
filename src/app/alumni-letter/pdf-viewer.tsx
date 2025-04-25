@@ -1,37 +1,29 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { Document, Page } from "react-pdf"
-
-// We need to set up the worker only on the client side
-let pdfjs: any
+import { useEffect, useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
 
 interface PDFViewerProps {
-  pdfUrl: string
-  pageNumber: number
-  onDocumentLoadSuccess: ({ numPages }: { numPages: number }) => void
+  pdfUrl: string;
+  pageNumber: number;
+  onDocumentLoadSuccess: ({ numPages }: { numPages: number }) => void;
 }
 
-export function PDFViewer({ pdfUrl, pageNumber, onDocumentLoadSuccess }: PDFViewerProps) {
-  const [isClient, setIsClient] = useState(false)
+export default function PDFViewer({ pdfUrl, pageNumber, onDocumentLoadSuccess }: PDFViewerProps) {
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Only import and set up pdfjs on the client side
-    const setupPdfjs = async () => {
-      pdfjs = await import("react-pdf")
-      pdfjs.pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.pdfjs.version}/pdf.worker.min.js`
-      setIsClient(true)
+    // Ensure this runs only in the browser
+    if (typeof window !== "undefined") {
+      pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+      setIsClient(true);
     }
-
-    setupPdfjs()
-  }, [])
+  }, []);
 
   if (!isClient) {
     return (
       <div className="flex justify-center items-center h-[600px] w-full border border-red-800 shadow-md">
         <div className="animate-pulse text-red-700">Loading PDF viewer...</div>
       </div>
-    )
+    );
   }
 
   return (
@@ -58,5 +50,5 @@ export function PDFViewer({ pdfUrl, pageNumber, onDocumentLoadSuccess }: PDFView
         width={600}
       />
     </Document>
-  )
+  );
 }

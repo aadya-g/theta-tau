@@ -7,10 +7,6 @@ import RushImage from "@/components/rush/rush-image"
 import { RushFAQ }  from "@/components/rush/rush-faq"
 import React from 'react'
 
-
-import AlumniLetterPage from "@/components/alumni-letter/alumni_letter"
-
-
 export default function AboutUs() {
     return (
       <div>
@@ -33,10 +29,6 @@ export default function AboutUs() {
           <section id="rush-faq">
             <RushFAQ />
           </section>
-
-          <section id="alumni-letter">
-              <AlumniLetterPage />
-            </section>
         </main>
       </div>
     );
