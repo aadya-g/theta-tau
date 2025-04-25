@@ -1,71 +1,29 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChevronLeft, ChevronRight, Download, ExternalLink } from "lucide-react"
-
-// Dynamically import the PDF viewer component with no SSR
-const PDFViewer = dynamic(() => import("./components/pdf-viewer").then((mod) => mod.default), {
-  ssr: false,
-  loading: () => (
-    <div className="flex justify-center items-center h-[600px] w-full border border-red-800 shadow-md">
-      <div className="animate-pulse text-red-700">Loading PDF viewer...</div>
-    </div>
-  ),
-})
-
-// Try different PDF paths to see which one works
-const PDF_PATHS = [
-  "/Semester-S25-Newsletter.pdf",
-  "Semester-S25-Newsletter.pdf",
-  "/semester-s25-newsletter.pdf",
-  "/public/Semester-S25-Newsletter.pdf",
-  "/alumni-letter/Semester-S25-Newsletter.pdf",
-]
+import { Download, ExternalLink } from "lucide-react"
 
 export default function AlumniLetterPage() {
-  const [numPages, setNumPages] = useState<number | null>(null)
-  const [pageNumber, setPageNumber] = useState<number>(1)
-  const [pdfUrl, setPdfUrl] = useState(PDF_PATHS[0])
-  const [testedPaths, setTestedPaths] = useState<{ [key: string]: boolean }>({})
+  const [pdfUrl, setPdfUrl] = useState("/Semester-S25-Newsletter.pdf")
+  const [pdfExists, setPdfExists] = useState(false)
 
-  // Test different PDF paths to find one that works
+  // Check if the PDF file exists
   useEffect(() => {
-    const testPdfPaths = async () => {
-      const results: { [key: string]: boolean } = {}
-
-      for (const path of PDF_PATHS) {
-        try {
-          const response = await fetch(path)
-          results[path] = response.ok
-
-          if (response.ok) {
-            console.log(`PDF found at: ${path}`)
-            setPdfUrl(path)
-            break
-          } else {
-            console.log(`PDF not found at: ${path} (Status: ${response.status})`)
-          }
-        } catch (error) {
-          console.error(`Error checking path ${path}:`, error)
-          results[path] = false
-        }
+    const checkPdfExists = async () => {
+      try {
+        const response = await fetch(pdfUrl)
+        setPdfExists(response.ok)
+        console.log(`PDF check at ${pdfUrl}: ${response.ok ? "Found" : "Not found"}`)
+      } catch (error) {
+        console.error(`Error checking PDF at ${pdfUrl}:`, error)
+        setPdfExists(false)
       }
-
-      setTestedPaths(results)
     }
 
-    testPdfPaths()
-  }, [])
-
-  function changePage(offset: number) {
-    setPageNumber((prevPageNumber) => {
-      const newPageNumber = prevPageNumber + offset
-      return newPageNumber >= 1 && newPageNumber <= (numPages || 1) ? newPageNumber : prevPageNumber
-    })
-  }
+    checkPdfExists()
+  }, [pdfUrl])
 
   return (
     <div className="container mx-auto py-8 px-4 bg-gradient-to-b from-red-50 to-yellow-50 min-h-screen">
@@ -113,53 +71,25 @@ export default function AlumniLetterPage() {
           </div>
 
           <div className="flex flex-col items-center">
-            <PDFViewer
-              pdfUrl={pdfUrl}
-              pageNumber={pageNumber}
-              onDocumentLoadSuccess={({ numPages }: { numPages: number }) => setNumPages(numPages)}
-            />
-
-            {numPages && (
-              <div className="flex items-center justify-between w-full max-w-md mt-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => changePage(-1)}
-                  disabled={pageNumber <= 1}
-                  className="border-yellow-500 text-yellow-600 hover:bg-yellow-50 hover:text-yellow-700 disabled:opacity-50 disabled:border-gray-300 disabled:text-gray-400"
-                >
-                  <ChevronLeft className="h-4 w-4 mr-1" />
-                  Previous
-                </Button>
-
-                <p className="text-sm text-red-800">
-                  Page {pageNumber} of {numPages}
-                </p>
-
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => changePage(1)}
-                  disabled={pageNumber >= numPages}
-                  className="border-yellow-500 text-yellow-600 hover:bg-yellow-50 hover:text-yellow-700 disabled:opacity-50 disabled:border-gray-300 disabled:text-gray-400"
-                >
-                  Next
-                  <ChevronRight className="h-4 w-4 ml-1" />
-                </Button>
-              </div>
-            )}
-          </div>
-
-          {/* Debug information - remove in production */}
-          <div className="mt-8 p-4 bg-gray-100 rounded-md text-xs">
-            <p className="font-medium mb-2">Path testing results:</p>
-            <ul className="space-y-1">
-              {Object.entries(testedPaths).map(([path, success]) => (
-                <li key={path} className={success ? "text-green-600" : "text-red-600"}>
-                  {path}: {success ? "✓ Found" : "✗ Not found"}
-                </li>
-              ))}
-            </ul>
+            {/* PDF Viewer using iframe - much more reliable than react-pdf */}
+            <div className="w-full border border-red-800 shadow-md" style={{ height: "800px" }}>
+              {pdfExists ? (
+                <iframe src={`${pdfUrl}#toolbar=0&navpanes=0`} className="w-full h-full" title="Alumni Letter PDF" />
+              ) : (
+                <div className="flex flex-col justify-center items-center h-full p-4">
+                  <div className="text-red-600 font-medium mb-4">Failed to load PDF</div>
+                  <div className="text-sm text-gray-700 bg-gray-100 p-4 rounded-md max-w-full overflow-auto">
+                    <p className="font-medium mb-2">Troubleshooting steps:</p>
+                    <ol className="list-decimal pl-5 space-y-2">
+                      <li>Verify the PDF file is in the public directory at the root level</li>
+                      <li>Check the filename and extension (case-sensitive: "Semester-S25-Newsletter.pdf")</li>
+                      <li>Try uploading the PDF again</li>
+                      <li>Check if the PDF can be opened directly in a browser</li>
+                    </ol>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </CardContent>
       </Card>
