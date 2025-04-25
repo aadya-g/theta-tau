@@ -37,7 +37,7 @@ export default function AlumniLetterPage() {
       </div>
       <Card className="max-w-4xl mx-auto">
         <CardHeader className="bg-red-900 text-white">
-          <CardTitle className="text-center text-2xl">Alumni Letter</CardTitle>
+          <CardTitle className="text-center text-2xl">Spring 2025 Newsletter</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <div className="flex justify-between mb-4">
