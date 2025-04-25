@@ -1,6 +1,7 @@
-import RushFlyer  from "@/components/rush/rush-flyer"
 import AlumniLetterPage from "@/components/alumni-letter/alumni-letter"
-export default function AboutUs() {
+import React from 'react'
+
+export default function AlumniLetter() {
     return (
       <div>
         <main>
