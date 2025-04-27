@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Download, ExternalLink } from "lucide-react"
 
 export default function AlumniLetterPage() {
-  const [pdfUrl, setPdfUrl] = useState("/Updated Semester S25 Newsletter.pdf")
+  const [pdfUrl, setPdfUrl] = useState("/Semester S25 Newsletter.pdf")
   const [pdfExists, setPdfExists] = useState(false)
 
   // Check if the PDF file exists
