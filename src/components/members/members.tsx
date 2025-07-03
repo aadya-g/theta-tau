@@ -161,7 +161,7 @@ const members: Member[] = [
   },
   {
     id: 21,
-    name: "Meghan",
+    name: "Meghan Kaminski",
     imageUrl: "/spring25_headshots/TT.png?height=200&width=200",
     pledgeClass: "Fall 2023",
     linkedinUrl: "https://www.linkedin.com/in/thetatauxi/",
