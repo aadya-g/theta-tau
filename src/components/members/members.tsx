@@ -80,7 +80,7 @@ const members: Member[] = [
     name: "Caden McDaniel",
     imageUrl: "/spring25_headshots/TT.png?height=200&width=200",
     pledgeClass: "Spring 2023",
-    linkedinUrl: "https://www.linkedin.com/in/johndoe",
+    linkedinUrl: "https://www.linkedin.com/in/thetatauxi/",
   },
   {
     id: 10,
@@ -292,7 +292,7 @@ const members: Member[] = [
     imageUrl: "/spring25_headshots/IzzyZ.JPG?height=200&width=200",
     pledgeClass: "Spring 2024",
     linkedinUrl: "https://www.linkedin.com/in/thetatauxi/",
-  },
+  }, 
   {
     id: 40,
     name: "Henry Czupryna",
