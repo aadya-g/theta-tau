@@ -9,7 +9,7 @@ export default function RushPage() {
     <div className="min-h-screen bg-background flex flex-col">
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
         <Link className="flex items-center justify-center" href="#">
-          <span className="sr-only">Epsilon Pi Tau</span>
+          <span className="sr-only">Theta Tau</span>
           <span className="font-bold text-xl">ΕΠΤ</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
