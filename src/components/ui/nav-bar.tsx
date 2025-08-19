@@ -23,6 +23,9 @@ export default function Navbar() {
                                 <NavLink href="/members">
                                     <span className="text-lg">Members</span>
                                 </NavLink>
+                                <NavLink href="/sponsorship">
+                                    <span className="text-lg">Sponsorship</span>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
