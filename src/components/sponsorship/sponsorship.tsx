@@ -7,7 +7,7 @@ export default function SponsorshipPage() {
   const sponsors = [
     {
       name: "Boston Scientific",
-      tier: "Platinum",
+      tier: "Maroon",
       logo: "/boston_scientific.jpg",
       website: "https://www.bostonscientific.com/en-US/home.html",
       description: "Advancing Science for life",
@@ -22,6 +22,8 @@ export default function SponsorshipPage() {
         return "bg-amber-100 text-amber-700"
       case "Silver":
         return "bg-slate-100 text-slate-700"
+      case "Maroon":
+        return "bg-red-900 text-white"
       default:
         return "bg-red-100 text-red-700"
     }
