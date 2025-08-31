@@ -70,6 +70,37 @@ export function RushFAQ() {
               the pledge process.
             </AccordionContent>
           </AccordionItem>
+           <AccordionItem value="item-5">
+            <AccordionTrigger>What if I miss an event?</AccordionTrigger>
+            <AccordionContent>
+                No worries! Just fill out our absence form and let us know why you can't make it—we understand that everyone has busy schedules.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger>What if I’m late to an event?</AccordionTrigger>
+            <AccordionContent>
+              That’s okay! Simply check in when you arrive and jump right in. We’d love to see you, even if it’s just for part of the event.
+            </AccordionContent>
+          </AccordionItem>
+         <AccordionItem value="item-7">
+            <AccordionTrigger>What if I have to leave early?</AccordionTrigger>
+            <AccordionContent>
+              No problem! You’re free to leave whenever you need to. Of course, we’d love for you to stay the whole time, but we know schedules can be busy.
+            </AccordionContent>
+          </AccordionItem>
+         <AccordionItem value="item-8">
+            <AccordionTrigger>How do I know if I got an invitation to the Engineering Challenge and Food Friday?</AccordionTrigger>
+            <AccordionContent>
+              Invitations will be sent to your email on Wednesday night (9/17). Be sure you’re receiving our emails and keep an eye out for your invite! Your invitation will also include the event location details.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-9">
+            <AccordionTrigger>When is the application due?</AccordionTrigger>
+            <AccordionContent>
+              The application must be submitted by Tuesday, 9/16, at 5 PM, just before our Field Day event. Be sure to submit it on time, as late applications will not be accepted.
+            </AccordionContent>
+          </AccordionItem>
+          
         </Accordion>
       </div>
     </section>
