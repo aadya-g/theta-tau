@@ -7,7 +7,7 @@ interface FeaturedBlogPostProps {
     post: BlogPost;
 }
 
-export function FeaturedBlogPost({ post }: FeaturedBlogPostProps) {
+export function FeaturedBlogPost({ post}: FeaturedBlogPostProps) {
     return (
         <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg mb-12 relative max-w-5xl mx-auto">
             <Link href={`/blog/${post.slug}`} className="absolute top-6 right-10">

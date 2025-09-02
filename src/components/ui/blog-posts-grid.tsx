@@ -8,9 +8,7 @@ interface BlogPostsGridProps {
     columns?: 3 | 4;
     showArrow?: boolean;
     fixedHeight?: boolean;
-}
-
-export function BlogPostsGrid({
+}export function BlogPostsGrid({
     posts,
     columns = 3,
     showArrow = false,
@@ -20,9 +18,14 @@ export function BlogPostsGrid({
         ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
         : "grid-cols-1 md:grid-cols-3";
 
+    // sort posts by date (newest first)
+    const sortedPosts = [...posts].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+
     return (
         <div className={`grid ${gridCols} gap-8 md:gap-12`}>
-            {posts.map((post) => (
+            {sortedPosts.map((post) => (
                 <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
