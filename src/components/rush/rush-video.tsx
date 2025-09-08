@@ -42,14 +42,14 @@ export default function RushVideo() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://youtube.com/embed/manQodkwLmA"
+                src="https://youtu.be/LiI1dZDD_4g"
                 title="Theta Tau Rush Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <p className="text-sm text-muted-foreground">Watch our Spring 2025 Rush Video</p>
+            <p className="text-sm text-muted-foreground">Watch our Fall 2025 Rush Video</p>
           </div>
         </div>
       </section>
