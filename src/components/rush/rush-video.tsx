@@ -42,7 +42,7 @@ export default function RushVideo() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://youtu.be/LiI1dZDD_4g"
+                src="https://youtube.com/embed/LiI1dZDD_4g"
                 title="Theta Tau Rush Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
