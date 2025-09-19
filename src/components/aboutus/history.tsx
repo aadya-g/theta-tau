@@ -7,7 +7,7 @@ const historyImages = [
     '/rush_fall25_thouse.jpg?height=400&width=600',
     '/electionscandid.JPG?height=400&width=600',
     '/execpic.JPG?height=400&width=600',
-    '/IMG_6621.JPG?height=400&width=600'
+    '/IMG_6621.jpg?height=400&width=600'
   ]
 
   function ImageCarousel({ images, name }: { images: string[], name: string }) {
