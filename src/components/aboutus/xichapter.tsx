@@ -4,7 +4,7 @@ import { useRef, useCallback, useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const xiChapterImages = [
-    '/fall25exec.JPG?height=400&width=600',
+    '/exec_fall25.png?height=400&width=600',
     '/elections.JPG?height=400&width=600',
     '/advisor_dinner.jpg?height=400&width=600',
     '/ike+katie_banquet.jpeg?height=400&width=600',
