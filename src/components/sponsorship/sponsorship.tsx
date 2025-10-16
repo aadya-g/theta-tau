@@ -12,6 +12,13 @@ export default function SponsorshipPage() {
       website: "https://www.bostonscientific.com/en-US/home.html",
       description: "Advancing Science for life",
     },
+    {
+      name: "Pentair",
+      tier: "Gold",
+      logo: "/pentair_logo.png",
+      website: "https://www.pentair.com/",
+      description: "Move, Improve and Enjoy Water",
+    },
   ]
 
   const getTierColor = (tier: string) => {

@@ -1,71 +1,81 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-import { getAllPostSlugs, getPostData } from '@/lib/blog';
+import { MDXRemote } from "next-mdx-remote/rsc"
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+import { getAllPostSlugs, getPostData } from "@/lib/blog"
 
-import rehypeSlug from 'rehype-slug';
-import rehypePrism from 'rehype-prism-plus';
-import remarkGfm from 'remark-gfm';
-import { Footer } from '@/components/ui/footer';
+import rehypeSlug from "rehype-slug"
+import remarkGfm from "remark-gfm"
 
 export async function generateStaticParams() {
-    const paths = getAllPostSlugs();
-    return paths.map(path => ({
-        slug: path.params.slug
-    }));
+  const paths = getAllPostSlugs()
+  return paths.map((path) => ({
+    slug: path.params.slug,
+  }))
 }
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
-    const post = await getPostData(params.slug);
+  const post = await getPostData(params.slug)
 
-    return (
-        <article className="min-h-screen bg-white">
-            <div className="container mx-auto px-4 pt-8 pb-16">
-                {/* Featured Post Box */}
-                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg mb-12 relative max-w-5xl mx-auto">
-                    <Link href={"/blog"} className="absolute top-6 md:right-[40%] pr-6">
-                        <div className="flex items-center rounded-full border-2 border-gray-600 transition duration-200 ease-in-out hover:border-red-800 hover:translate-x-1">
-                            <div className="h-12 w-12 flex items-center justify-center bg-white rounded-full transition duration-200 ease-in-out hover:bg-red-100 hover:text-red-800">
-                                <ArrowLeft className="h-7 w-7" />
-                            </div>
-                        </div>
-                    </Link>
-                    <div className="flex flex-col md:flex-row min-h-[400px]">
-                        <div className="md:w-1/2 h-[400px]">
-                            <Image
-                                src={post.image}
-                                alt={post.title}
-                                width={400}
-                                height={400}
-                                className="w-full h-[400px] object-cover"
-                            />
-                        </div>
-                        <div className="md:w-1/2 p-6 pt-32 flex flex-col justify-end">
-                            <p className="text-gray-600 mb-2">{post.date}</p>
-                            <h1 className="text-3xl font-bold mb-4">
-                                {post.title}
-                            </h1>
-                            <p className="mb-4">{post.description}</p>
-                        </div>
-                    </div>
-                </div>
-                {/* Article Content */}
-                <div className="max-w-4xl mx-auto">
-                    <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-red-800">
-                        <MDXRemote
-                            source={post.content}
-                            options={{
-                                mdxOptions: {
-                                    remarkPlugins: [remarkGfm],
-                                    rehypePlugins: [rehypeSlug],
-                                },
-                            }}
-                        />
-                    </div>
-                </div>
-            </div>
+  return (
+    <article className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <div className="bg-card border-b border-border">
+        <div className="container mx-auto px-4 pt-8 pb-16 max-w-5xl">
+          {/* Back Button */}
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors duration-200 mb-12 group"
+          >
+            <ArrowLeft className="h-5 w-5 transition-transform duration-200 group-hover:-translate-x-1" />
+            <span className="font-medium">Back to Blog</span>
+          </Link>
 
-        </article>
-    );
+          {/* Post Header */}
+          <div className="mb-8">
+            <p className="text-accent text-sm font-medium uppercase tracking-wider mb-4">{post.date}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance leading-tight">
+              {post.title}
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed text-pretty">{post.description}</p>
+          </div>
+
+          {/* Featured Image */}
+          <div className="relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+            <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+          </div>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <div className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-3xl mx-auto">
+          <div
+            className="prose prose-lg max-w-none 
+                        prose-headings:text-foreground prose-headings:font-bold prose-headings:tracking-tight
+                        prose-p:text-muted-foreground prose-p:leading-relaxed
+                        prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
+                        prose-strong:text-foreground prose-strong:font-semibold
+                        prose-code:text-accent prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+                        prose-pre:bg-card prose-pre:border prose-pre:border-border
+                        prose-img:rounded-xl prose-img:shadow-md
+                        prose-hr:border-border
+                        prose-blockquote:border-l-accent prose-blockquote:text-muted-foreground prose-blockquote:italic
+                        prose-ul:text-muted-foreground prose-ol:text-muted-foreground
+                        prose-li:marker:text-accent"
+          >
+            <MDXRemote
+              source={post.content}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [rehypeSlug],
+                },
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </article>
+  )
 }
