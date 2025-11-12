@@ -19,6 +19,13 @@ export default function SponsorshipPage() {
       website: "https://www.pentair.com/",
       description: "Move, Improve and Enjoy Water",
     },
+    {
+      name: "Kohler",
+      tier: "Jacqueminot",
+      logo: "/Kohler.jpeg",
+      website: "https://www.kohler.com/en",
+      description: "THE BOLD LOOK OF KOHLER®",
+    },
   ]
 
   const getTierColor = (tier: string) => {
@@ -31,6 +38,8 @@ export default function SponsorshipPage() {
         return "bg-slate-100 text-slate-700"
       case "Maroon":
         return "bg-red-900 text-white"
+      case "Jacqueminot":
+        return "bg-slate-100 text-slate-700"
       default:
         return "bg-red-100 text-red-700"
     }
