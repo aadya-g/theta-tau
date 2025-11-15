@@ -6,11 +6,11 @@ import Badge from "@/components/ui/badge"
 export default function SponsorshipPage() {
   const sponsors = [
     {
-      name: "Boston Scientific",
-      tier: "Maroon",
-      logo: "/boston_scientific.jpg",
-      website: "https://www.bostonscientific.com/en-US/home.html",
-      description: "Advancing Science for life",
+      name: "Kohler",
+      tier: "Jacqueminot",
+      logo: "/Kohler.jpeg",
+      website: "https://www.kohler.com/en",
+      description: "THE BOLD LOOK OF KOHLER®",
     },
     {
       name: "Pentair",
@@ -20,11 +20,11 @@ export default function SponsorshipPage() {
       description: "Move, Improve and Enjoy Water",
     },
     {
-      name: "Kohler",
-      tier: "Jacqueminot",
-      logo: "/Kohler.jpeg",
-      website: "https://www.kohler.com/en",
-      description: "THE BOLD LOOK OF KOHLER®",
+      name: "Boston Scientific",
+      tier: "Maroon",
+      logo: "/boston_scientific.jpg",
+      website: "https://www.bostonscientific.com/en-US/home.html",
+      description: "Advancing Science for life",
     },
   ]
 
