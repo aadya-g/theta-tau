@@ -1,11 +1,8 @@
-import { MDXRemote } from "next-mdx-remote"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { getAllPostSlugs, getPostData } from "@/lib/blog"
 
-import rehypeSlug from "rehype-slug"
-import remarkGfm from "remark-gfm"
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs()
@@ -16,6 +13,8 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getPostData(params.slug)
+
+  const PostContent = (await import(`@/content/posts/${params.slug}.mdx`)).default
 
   return (
     <article className="min-h-screen bg-background">
@@ -49,31 +48,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
       {/* Article Content */}
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-3xl mx-auto">
-          <div
-            className="prose prose-lg max-w-none 
-                        prose-headings:text-foreground prose-headings:font-bold prose-headings:tracking-tight
-                        prose-p:text-muted-foreground prose-p:leading-relaxed
-                        prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-                        prose-strong:text-foreground prose-strong:font-semibold
-                        prose-code:text-accent prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-                        prose-pre:bg-card prose-pre:border prose-pre:border-border
-                        prose-img:rounded-xl prose-img:shadow-md
-                        prose-hr:border-border
-                        prose-blockquote:border-l-accent prose-blockquote:text-muted-foreground prose-blockquote:italic
-                        prose-ul:text-muted-foreground prose-ol:text-muted-foreground
-                        prose-li:marker:text-accent"
-          >
-            <MDXRemote
-              source={post.content}
-              options={{
-                mdxOptions: {
-                  remarkPlugins: [remarkGfm],
-                  rehypePlugins: [rehypeSlug],
-                },
-              }}
-            />
-          </div>
+        <div className="max-w-3xl mx-auto prose prose-lg max-w-none">
+          <PostContent />
         </div>
       </div>
     </article>
