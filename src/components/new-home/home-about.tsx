@@ -1,57 +1,62 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+"use client"
 
 export function HomeAboutSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-[#1a0505]">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-          <div className="flex justify-center">
-            <Image
-              src="/20240908_150702_701104.jpeg?height=400&width=600"
-              alt="Engineering fraternity members"
-              width={600}
-              height={400}
-              className="rounded-lg object-cover border border-[#3d0c0c]"
+    <section
+      id="about"
+      className="
+        py-20 px-4
+        bg-gradient-to-b from-white to-[#0A0000]
+        text-white
+      "
+    >
+      <div className="container mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* IMAGE */}
+          <div className="relative h-[600px] rounded-2xl overflow-hidden group">
+            <div className="absolute inset-0 border-2 border-[#D4AF37]/30 rounded-2xl group-hover:border-[#D4AF37] transition-colors z-10" />
+            <img
+              src="/nationals2025.JPEG"
+              alt="Brotherhood"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
+            {/* Gold-red gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#8B0000]/30 via-transparent to-[#D4AF37]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">About Theta Tau</h2>
-            <p className="text-gray-300 md:text-lg">
-              Founded in 1904, Theta Tau is an professional engineering fraternity. Our
-              chapter focuses on fostering leadership, academic excellence, and professional development among
-              engineering students.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-              <div className="flex flex-col gap-2 border border-[#3d0c0c] rounded-lg p-4 bg-[#2a0808]">
-                <h3 className="text-lg font-semibold text-white">Our Purpose</h3>
-                <p className="text-sm text-gray-300">
-                  To develop and maintain a high standard of professional interest among members, and to unite them in a strong bond of fraternal fellowship.
-                </p>
+
+          {/* TEXT */}
+          <div className="space-y-6">
+            <div>
+              <div className="text-sm font-semibold text-[#D4AF37] mb-2 tracking-wider">
+                SINCE 1904
               </div>
-              <div className="flex flex-col gap-2 border border-[#3d0c0c] rounded-lg p-4 bg-[#2a0808]">
-                <h3 className="text-lg font-semibold text-white">Our Pillars</h3>
-                <p className="text-sm text-gray-300">Professional Development, Community Service, and Brotherhood.</p>
-              </div>
-              <div className="flex flex-col gap-2 border border-[#3d0c0c] rounded-lg p-4 bg-[#2a0808]">
-                <h3 className="text-lg font-semibold text-white">Culture</h3>
-                <p className="text-sm text-gray-300"> Fosters lifelong relationships and connections grounded in mutual respect and professionalism, enriched by 
-                    the diversity of engineering disciplines and demographics.</p>
-              </div>
-              <div className="flex flex-col gap-2 border border-[#3d0c0c] rounded-lg p-4 bg-[#2a0808]">
-                <h3 className="text-lg font-semibold text-white">Open Motto</h3>
-                <p className="text-sm text-gray-300">
-                "Whatsoever thy hand findeth to do, do it with thy might;..." -Ecclesiastes 9:10
-                </p>
-              </div>
+
+              {/* Ensure visibility as gradient transitions */}
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance text-white drop-shadow-lg">
+                A Legacy of Excellence
+              </h2>
             </div>
-            <div className="pt-2">
-              <Link href="/about" passHref>
-                <Button variant="outline" className="border-[#8B0000] text-[#ff6b6b] hover:bg-[#8B0000]/10">
-                  Learn More About Us
-                </Button>
-              </Link>
+
+            <p className="text-lg leading-relaxed text-gray-200">
+              Founded in 1904, Theta Tau is the oldest and foremost professional engineering
+              fraternity. Our Xi chapter is dedicated to developing engineers who combine technical
+              excellence with strong character and leadership skills.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-200">
+              We foster an environment of mutual respect and professionalism, enriched by the
+              diversity of engineering disciplines and demographics. Our culture emphasizes lifelong
+              relationships and connections grounded in a strong bond of fraternal fellowship.
+            </p>
+
+            <div className="pt-4">
+              <blockquote className="border-l-4 border-[#D4AF37] pl-6 italic text-lg text-gray-100">
+                "Whatsoever thy hand findeth to do, do it with thy might..."
+                <footer className="text-sm text-gray-300 mt-2">
+                  — Ecclesiastes 9:10
+                </footer>
+              </blockquote>
             </div>
           </div>
         </div>
@@ -59,4 +64,3 @@ export function HomeAboutSection() {
     </section>
   )
 }
-

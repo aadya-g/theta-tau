@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
@@ -65,3 +67,4 @@ interface BlogPostsGridProps {
         </div>
     );
 }
+export type { BlogPostsGridProps };

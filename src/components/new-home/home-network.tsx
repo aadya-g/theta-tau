@@ -1,62 +1,61 @@
-'use client'
+"use client"
 
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 
 export function HomeOurNetwork() {
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(false)
 
   // Ensure equal number of logos per row (8 logos per row)
-  const totalLogos = companyLogos.length;
-  const logosPerRow = 8;
-  const numberOfRows = Math.ceil(totalLogos / logosPerRow);
+  const totalLogos = companyLogos.length
+  const logosPerRow = 8
+  const numberOfRows = Math.ceil(totalLogos / logosPerRow)
 
   // Fill remaining slots with duplicates from the start to ensure equal rows
-  const paddedLogos = [...companyLogos];
+  const paddedLogos = [...companyLogos]
   while (paddedLogos.length < numberOfRows * logosPerRow) {
-    paddedLogos.push(companyLogos[paddedLogos.length % companyLogos.length]);
+    paddedLogos.push(companyLogos[paddedLogos.length % companyLogos.length])
   }
 
   // Split into equal rows
-  const rows = Array.from({ length: numberOfRows }, (_, i) =>
-    paddedLogos.slice(i * logosPerRow, (i + 1) * logosPerRow)
-  );
+  const rows = Array.from({ length: numberOfRows }, (_, i) => paddedLogos.slice(i * logosPerRow, (i + 1) * logosPerRow))
 
   return (
-    <section className="py-24 bg-white overflow-hidden ">
-      <div className="container max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-left mb-8">Our Alumni Network</h2>
-        <p className="text-xl text-left text-gray-600 mb-24 max-w-3xl leading-relaxed">
-          Theta Tau alumni are making significant contributions at leading technology and engineering companies worldwide. Explore our extensive network:
+    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-[#0A0000] to-white">
+      <div className="container max-w-7xl mx-auto px-4">
+        <h2 className="text-5xl font-bold text-left mb-8 text-white">Our Alumni Network</h2>
+        <p className="text-xl text-left text-white mb-24 max-w-3xl leading-relaxed">
+          Theta Tau alumni are making significant contributions at leading technology and engineering companies
+          worldwide. Explore our extensive network:
         </p>
 
         <div className="relative">
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className="mb-12 "
+              className="mb-12"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
               <div
-                className={`inline-flex logo-track ${isPaused ? 'paused' : ''}`}
+                className={`inline-flex logo-track ${isPaused ? "paused" : ""}`}
                 style={{
-                  width: 'fit-content',
-                  whiteSpace: 'nowrap'
+                  width: "fit-content",
+                  whiteSpace: "nowrap",
                 }}
               >
                 {/* Original set */}
                 {row.map((logo, index) => (
                   <div
                     key={index}
-                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-transform duration-300 hover:scale-110"
+                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]"
                   >
-                    <div className="relative w-[200px] h-[100px]">
+                    <div className="relative w-[200px] h-[100px] transition-opacity duration-300">
                       <Image
-                        src={logo.src}
+                        src={logo.src || "/placeholder.svg"}
                         alt={logo.alt}
                         fill
-                        className="object-contain"
+                        className="object-contain filter brightness-200"
                         sizes="200px"
                       />
                     </div>
@@ -66,14 +65,14 @@ export function HomeOurNetwork() {
                 {row.map((logo, index) => (
                   <div
                     key={`duplicate-${index}`}
-                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-transform duration-300 hover:scale-110"
+                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]"
                   >
-                    <div className="relative w-[200px] h-[100px]">
+                    <div className="relative w-[200px] h-[100px] transition-opacity duration-300">
                       <Image
-                        src={logo.src}
+                        src={logo.src || "/placeholder.svg"}
                         alt={logo.alt}
                         fill
-                        className="object-contain"
+                        className="object-contain filter brightness-200"
                         sizes="200px"
                       />
                     </div>
@@ -119,5 +118,5 @@ const companyLogos = [
   { src: "/logos/Eaton_Corporation_logo.svg.png", alt: "Eaton Corporation Logo" },
   { src: "/logos/Sub-Zero_(logo).svg", alt: "Sub-Zero Logo" },
   { src: "/logos/Honeywell-Logo.wine.svg", alt: "Honeywell Logo" },
-  { src: "/logos/Epic_Systems.svg", alt: "Epic Systems Logo" }
-];
+  { src: "/logos/Epic_Systems.svg", alt: "Epic Systems Logo" },
+]
