@@ -1,4 +1,4 @@
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote } from "next-mdx-remote"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
