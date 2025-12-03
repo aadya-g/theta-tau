@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getPostData(params.slug)
 
-  const PostContent = (await import(`@/content/posts/${params.slug}.mdx`)).default
+  const PostContent = (await import(`@/content/blog/${params.slug}.mdx`)).default
 
   return (
     <article className="min-h-screen bg-background">
