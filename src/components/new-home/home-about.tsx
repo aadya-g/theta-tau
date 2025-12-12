@@ -6,7 +6,7 @@ export function HomeAboutSection() {
       id="about"
       className="
         py-20 px-4
-        bg-gradient-to-b from-white to-[#0A0000]
+        bg-gradient-to-b from-[#FFF5D7] to-[#0A0000]
         text-white
       "
     >
@@ -28,7 +28,7 @@ export function HomeAboutSection() {
           {/* TEXT */}
           <div className="space-y-6">
             <div>
-              <div className="text-sm font-semibold text-[#D4AF37] mb-2 tracking-wider">
+              <div className="text-sm font-semibold text-black mb-2 tracking-wider">
                 SINCE 1904
               </div>
 

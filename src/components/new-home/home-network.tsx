@@ -21,10 +21,10 @@ export function HomeOurNetwork() {
   const rows = Array.from({ length: numberOfRows }, (_, i) => paddedLogos.slice(i * logosPerRow, (i + 1) * logosPerRow))
 
   return (
-    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-gradient-to-b from-[#0A0000] to-white">
+    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-white">
       <div className="container max-w-7xl mx-auto px-4">
-        <h2 className="text-5xl font-bold text-left mb-8 text-white">Our Alumni Network</h2>
-        <p className="text-xl text-left text-white mb-24 max-w-3xl leading-relaxed">
+        <h2 className="text-5xl font-bold text-left mb-8 text-black">Our Alumni Network</h2>
+        <p className="text-xl text-left text-black mb-24 max-w-3xl leading-relaxed">
           Theta Tau alumni are making significant contributions at leading technology and engineering companies
           worldwide. Explore our extensive network:
         </p>
@@ -48,7 +48,7 @@ export function HomeOurNetwork() {
                 {row.map((logo, index) => (
                   <div
                     key={index}
-                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 hover:brightness-150 hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]"
+                    className="w-[200px] h-[100px] flex items-center justify-center flex-shrink-0 mx-8 transition-all duration-300 hover:scale-110 hover:brightness-150"
                   >
                     <div className="relative w-[200px] h-[100px] transition-opacity duration-300">
                       <Image

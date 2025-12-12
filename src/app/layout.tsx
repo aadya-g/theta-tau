@@ -1,45 +1,47 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import Navbar from "@/components/ui/nav-bar";
-import { Footer } from "@/components/ui/footer";
-import GoogleAnalytics from '@/lib/google-analytics'
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, JetBrains_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "Theta Tau - Xi Chapter",
-  description: "University of Wisconsin-Madison Co-Ed Professional Engineering Fraternity",
-};
+  title: "Theta Tau Xi Chapter | Professional Engineering Fraternity",
+  description:
+    "Join Theta Tau Xi - a premier engineering fraternity dedicated to academic excellence, professional development, and lifelong brotherhood.",
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <head>
-        <GoogleAnalytics />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        {children}
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }

@@ -6,7 +6,6 @@ import { HomePillarsSection } from "@/components/new-home/home-pillars"
 import { HomeAboutSection } from "@/components/new-home/home-about"
 //import { HomeImpactSection } from "@/components/home/home-impact-section"
 import { HomeOurNetwork } from "@/components/new-home/home-network"
-// import  {HomeBlogSection }from "@/components/home/home-blog-section"
 
 export default function HomePage() {
   return (

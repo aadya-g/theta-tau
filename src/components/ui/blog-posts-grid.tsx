@@ -1,70 +1,59 @@
-"use client";
-
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import { type BlogPost } from '@/lib/blog';
+import Link from "next/link"
+import Image from "next/image"
+import type { BlogPost } from "@/lib/blog"
+import { ArrowRight } from "lucide-react"
 
 interface BlogPostsGridProps {
-    posts: BlogPost[];
-    columns?: 3 | 4;
-    showArrow?: boolean;
-    fixedHeight?: boolean;
-}export function BlogPostsGrid({
-    posts,
-    columns = 3,
-    showArrow = false,
-    fixedHeight = false
-}: BlogPostsGridProps) {
-    const gridCols = columns === 4
-        ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-        : "grid-cols-1 md:grid-cols-3";
-
-    // sort posts by date (newest first)
-    const sortedPosts = [...posts].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-
-    return (
-        <div className={`grid ${gridCols} gap-8 md:gap-12`}>
-            {sortedPosts.map((post) => (
-                <Link
-                    key={post.slug}
-                    href={`/blog/${post.slug}`}
-                    className={`group block ${fixedHeight ? 'h-[500px]' : ''}`}
-                >
-                    <article className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
-                        <div className="relative h-72 w-full flex-shrink-0">
-                            <Image
-                                src={post.image}
-                                alt={post.title}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <div className="flex-grow p-8 flex flex-col">
-                            <p className="text-gray-500 text-lg mb-6">{post.date}</p>
-
-                            <div className="flex items-start justify-between gap-4 mb-6">
-                                <h4 className="text-2xl font-semibold text-gray-900 group-hover:text-gray-600 transition-colors duration-200 flex-grow line-clamp-2">
-                                    {post.title}
-                                </h4>
-                                {showArrow && (
-                                    <div className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 flex-shrink-0">
-                                        <ArrowUpRight className="h-7 w-7 text-gray-900" />
-                                    </div>
-                                )}
-                            </div>
-
-                            <p className="text-gray-600 text-lg leading-relaxed line-clamp-3 flex-grow">
-                                {post.description}
-                            </p>
-                        </div>
-                    </article>
-                </Link>
-            ))}
-        </div>
-    );
+  posts: BlogPost[]
+  columns?: 2 | 3 | 4
+  showArrow?: boolean
+  fixedHeight?: boolean
 }
-export type { BlogPostsGridProps };
+
+export function BlogPostsGrid({ posts, columns = 3, showArrow = false, fixedHeight = false }: BlogPostsGridProps) {
+  const gridCols = {
+    2: "grid-cols-1 md:grid-cols-2",
+    3: "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+    4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+  }
+
+  return (
+    <div className={`grid ${gridCols[columns]} gap-8`}>
+      {posts.map((post) => (
+        <Link
+          key={post.slug}
+          href={`/blog/${post.slug}`}
+          className="group block overflow-hidden rounded-lg border border-gold/20 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-gold hover:shadow-xl hover:shadow-gold/20 hover:-translate-y-1"
+        >
+          {post.image && (
+            <div className="relative h-48 w-full overflow-hidden">
+              <Image
+                src={post.image || "/placeholder.svg"}
+                alt={post.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              {post.category && (
+                <div className="absolute top-4 left-4 bg-dark-red/90 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full">
+                  {post.category}
+                </div>
+              )}
+            </div>
+          )}
+          <div className={`p-6 ${fixedHeight ? "h-52" : ""}`}>
+            <div className="flex items-center justify-between mb-3">
+              <time className="text-sm text-muted-foreground">{post.date}</time>
+              {showArrow && (
+                <ArrowRight className="w-5 h-5 text-gold transition-transform duration-300 group-hover:translate-x-1" />
+              )}
+            </div>
+            <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-gold transition-colors duration-300">
+              {post.title}
+            </h3>
+            <p className="text-muted-foreground line-clamp-3">{post.excerpt}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  )
+}
