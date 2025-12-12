@@ -7,7 +7,7 @@ export function HomePillarsSection() {
       id="pillars"
       className="
         py-20 px-4
-        bg-gradient-to-b from-[#FFF5D7] to- [#0A0000] 
+        bg-gradient-to-b from-[#FFF5D7] to-[#0A0000] 
       "
     >
       <div className="container mx-auto">
